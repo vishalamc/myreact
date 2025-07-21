@@ -7,7 +7,8 @@ import Introduction from "./pages/Introduction";
 import Variables from "./pages/Variables";
 import Loops from "./pages/Loops";
 import Identifier from "./pages/Identifier";
-
+import Keyword from "./pages/Keyword";
+import Datatype from "./pages/Datatypes";
 function App() {
   return (
     <Router>
@@ -18,6 +19,8 @@ function App() {
           <Route path="variables" element={<Variables />} />
           <Route path="loops" element={<Loops />} />
           <Route path="identifier" element={<Identifier />} />
+        <Route path="keyword" element={<Keyword />} />
+        <Route path="datatypes" element={<Datatype />} />
         </Route>
       </Routes>
     </Router>
