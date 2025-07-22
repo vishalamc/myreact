@@ -6,7 +6,7 @@ const Constant = () => {
   return (
     <Box sx={{ p: 3 }}>
 
-      <Typography variant="h6" gutterBottom color="primary">
+      <Typography variant="h4" gutterBottom color="primary">
         Constant in C
       </Typography>
 
