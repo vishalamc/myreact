@@ -5,7 +5,7 @@ import { Typography, Box, Grid, Card, CardMedia,Table, TableBody, TableCell, Tab
 const Variable = () => {
   return (
     <Box sx={{ p: 3 }}>
-      <Typography variant="h5" color="primary" gutterBottom>
+      <Typography variant="h4" color="primary" gutterBottom>
         Variable in C
       </Typography>
    
