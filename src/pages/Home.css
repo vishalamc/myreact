@@ -1,35 +1,73 @@
-/* Home.css */
 .container {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
+  display: block;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .sidebar {
-  width: 250px;
-  background-color: #f3f3f3;
+  width: 260px;
+  background: #2e3b55;
+  color: white;
   padding: 20px;
-  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.sidebar ul.sub-list {
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.sidebar ul.sub-list li {
+  margin-bottom: 8px;
+}
+
+.sidebar ul.sub-list li a {
+  color: #90caf9;
+  text-decoration: none;
+  padding: 4px 8px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul.sub-list li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 .main-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #ffffff;
+  margin-left: 260px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
 }
 
-/* Responsive design */
+/* ✅ Responsive */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
   .sidebar {
+    position: relative;
     width: 100%;
-    box-shadow: none;
+    height: auto;
   }
 
   .main-content {
-    padding: 10px;
+    margin-left: 0;    /* 🔁 Reset margin */
+    padding: 15px;
   }
 }
