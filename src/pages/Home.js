@@ -27,8 +27,11 @@ const Home = () => {
             <ul>
               <li><Link to="introduction">Introduction</Link></li>
               <li><Link to="identifier">Identifier</Link></li>
+              <li><Link to="keyword">Keywords</Link></li>
+              <li><Link to="datatypes">Datatypes</Link></li>
               <li><Link to="variables">Variables</Link></li>
               <li><Link to="loops">Loops</Link></li>
+            
             </ul>
           </li>
         </ul>
