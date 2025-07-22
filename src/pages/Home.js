@@ -43,7 +43,7 @@ const Home = () => {
             <li><Link to="datatypes">Datatypes</Link></li>
             <li><Link to="constant">Constant</Link></li>
             <li><Link to="variables">Variables</Link></li>
-            <li><Link to="loops">Loops</Link></li>
+
           </ul>
         </List>
       </div>
