@@ -10,6 +10,7 @@ import Identifier from "./pages/Identifier";
 import Keyword from "./pages/Keyword";
 import Datatype from "./pages/Datatypes";
 import Constant from "./pages/Constant";
+import PracticeQ from "./pages/PracticeQ";
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
         <Route path="keyword" element={<Keyword />} />
         <Route path="datatypes" element={<Datatype />} />
                <Route path="constant" element={<Constant />} />
+         <Route path="practiceq" element={<PracticeQ />} />
         </Route>
       </Routes>
     </Router>
