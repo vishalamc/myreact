@@ -43,8 +43,17 @@ const Home = () => {
             <li><Link to="datatypes">Datatypes</Link></li>
             <li><Link to="constant">Constant</Link></li>
             <li><Link to="variables">Variables</Link></li>
-             <li><Link to="practiceq">MCQs</Link></li>
+            <li><Link to="expression">Expressions and Statements</Link></li>
+            <li><Link to="operator">Operators</Link></li>
+            <li><Link to="practiceq">MCQs</Link></li>
+          
           </ul>
+             <ListItem disablePadding>
+            <ListItemText primary="Skill Test" primaryTypographyProps={{ style: { color: '#ffd54f', fontWeight: 'bold' } }} />
+          </ListItem>
+          <ul className="sub-list">
+            <li><Link to="partialcode">PartialCode</Link></li>
+            </ul>
         </List>
       </div>
       <div className="main-content">
