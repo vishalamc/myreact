@@ -19,7 +19,7 @@ import Bitwise from "./pages/Bitwise";
 import Otherop from "./pages/Otherop";
 import Increment from "./pages/Increment";
 import Partialcode from "./pages/Partialcode";
-
+import Controlstructure from "./pages/Controlstructure"
 function App() {
   return (
     <Router>
@@ -44,6 +44,7 @@ function App() {
        <Route path="otherop" element={<Otherop />} />
        <Route path="increment" element={<Increment />} />
         <Route path="partialcode" element={<Partialcode />} />
+         <Route path="controlstructure" element={<Controlstructure />} />
         </Route>
       </Routes>
     </Router>
