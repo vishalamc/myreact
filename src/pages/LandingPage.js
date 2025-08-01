@@ -1,94 +1,141 @@
 import React from 'react';
-import { Typography, Button, Box, Paper } from '@mui/material';
+import '../pages/Landing.css';
 import { useNavigate } from 'react-router-dom';
-import '../App.css';
 
-export default function LandingPage() {
+const LandingPage = () => {
   const navigate = useNavigate();
 
+  const courses = [
+    {
+      title: 'C Programming',
+      desc: 'Find step-by-step lessons and hands-on examples to guide your learning journey.',
+      path: '/home'
+    },
+    {
+      title: 'C++ Programming',
+      desc: 'Dive into the core concepts and build strong programming fundamentals.',
+      path: 'https://www.kumartut.co.in/cpp',
+      external: true
+    },
+    {
+      title: 'Java Programming',
+      desc: 'Strong foundations make powerful programmers. Think logically. Code in Java.',
+      path: 'https://www.kumartut.co.in/Java',
+      external: true
+    },
+    {
+      title: 'Python Programming',
+      desc: 'Start simple. Grow scalable. Learn Python. Where fundamentals meet real-world coding.',
+      path: 'https://www.kumartut.co.in/Python',
+      external: true
+    }
+  ];
+
+  const videoLectures = [
+    {
+      title: 'Mathematics',
+      img: '/math.jpg',
+      path: '/math-lectures'
+    },
+    {
+      title: 'Science',
+      img: '/science.jpg',
+      path: '/science-lectures'
+    },
+    {
+      title: 'Computer Studies',
+      img: '/computer.jpg',
+      path: '/computer-lectures'
+    },
+    {
+      title: 'Languages',
+      img: '/lang.jpg',
+      path: '/language-lectures'
+    }
+  ];
+
+  const handleKickStart = () => {
+    alert('Start with any course');
+  };
+
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #fce4ec, #e1f5fe)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 3,
-      }}
-    >
-      <Paper
-        elevation={6}
-        sx={{
-          p: { xs: 3, md: 5 },
-          maxWidth: 900,
-          width: '100%',
-          textAlign: 'center',
-          backdropFilter: 'blur(10px)',
-          backgroundColor: 'rgba(210, 202, 202, 0.8)',
-          borderRadius: '20px',
-          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
-        }}
-      >
-        <Typography
-          variant="h3"
-          sx={{ fontWeight: 600, mb: 2, color: '#4a148c' }}
-        >
-          Learn C Programming Easily
-        </Typography>
+    <div>
+      <header>
+        <div className="logo">GyanManthan Gurukul</div>
+        <nav>
+          <ul>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#video">Video Lectures</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <Typography
-          variant="h6"
-          sx={{
-            mt: 2,
-            mb: 3,
-            textAlign: 'justify',
-            lineHeight: 1.8,
-            color: '#424242',
-          }}
-        >
-          This platform is designed to help you learn C programming in a clear and
-          simple way. Whether you're a beginner or reviewing basics, you’ll find
-          step-by-step lessons and hands-on examples to guide your learning journey.
-          Dive into the core concepts and build strong programming fundamentals.
-        </Typography>
+      <section className="hero" role="banner">
+        <div className="hero-content">
+          <h1>Welcome to GyanManthan Gurukul</h1>
+          <p>
+            Explore, Understand, Evolve — Where tradition meets modern learning.
+          </p>
+          <button className="btn-primary" onClick={handleKickStart}>
+            Kick Start
+          </button>
+        </div>
+      </section>
 
-        <Box sx={{ mt: 4, mb: 4 }}>
-          <img
-            src="/vishal.jpeg"
-            alt="C Programming"
-            className="round-image"
-            style={{
-              width: 160,
-              height: 160,
-              borderRadius: '50%',
-              border: '4px solid #4a148c',
-              boxShadow: '0 0 10px rgba(0,0,0,0.2)',
-            }}
-          />
-        </Box>
+      <section id="courses">
+        <h2 className="section-title">Our Courses</h2>
+        <div className="courses">
+          {courses.map((course, i) => (
+            <div
+              className="card"
+              tabIndex={0}
+              key={i}
+              onClick={() => {
+  course.external
+    ? window.location.href = course.path
+    : navigate(course.path);
+}}
+            >
+              <h3>{course.title}</h3>
+              <p>{course.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <Button
-          variant="contained"
-          color="secondary"
-          size="large"
-          sx={{
-            mt: 2,
-            px: 5,
-            py: 1.5,
-            fontSize: '1.1rem',
-            textTransform: 'none',
-            borderRadius: 3,
-            background: '#7b1fa2',
-            '&:hover': {
-              background: '#4a148c',
-            },
-          }}
-          onClick={() => navigate('/home')}
-        >
-          Start Learning
-        </Button>
-      </Paper>
-    </Box>
+      <section id="video">
+        <h2 className="section-title">Video Lectures</h2>
+        <div className="faculty">
+          {videoLectures.map((lecture, i) => (
+            <div
+              className="card"
+              tabIndex={0}
+              key={i}
+              onClick={() => navigate(lecture.path)}
+              style={{ cursor: 'pointer' }}
+            >
+              <h3>{lecture.title}</h3>
+              <img src={lecture.img} alt={lecture.title} />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact" className="contact">
+        <h2 className="section-title">Get in Touch</h2>
+        <div className="contact-details">
+          <p><strong>Name:</strong> Kumar Vishal</p>
+          <p><strong>Address:</strong> Kasba, Purnia, Bihar</p>
+          <p><strong>Phone:</strong> 7808625336</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>© 2025 GyanManthan Kumar Vishal. All Rights Reserved.</p>
+      </footer>
+    </div>
   );
-}
+};
+
+export default LandingPage;
