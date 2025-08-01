@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Navigate, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
+import Videolectures from "./pages/Videolectures"
 import Home from "./pages/Home";
 import Introduction from "./pages/Introduction";
 import Variables from "./pages/Variables";
@@ -45,7 +46,9 @@ function App() {
        <Route path="increment" element={<Increment />} />
         <Route path="partialcode" element={<Partialcode />} />
          <Route path="controlstructure" element={<Controlstructure />} />
+       
         </Route>
+         <Route path="videolectures" element={<Videolectures />} />
       </Routes>
     </Router>
   );
