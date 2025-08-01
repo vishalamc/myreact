@@ -45,6 +45,7 @@ const Home = () => {
             <li><Link to="variables">Variables</Link></li>
             <li><Link to="expression">Expressions and Statements</Link></li>
             <li><Link to="operator">Operators</Link></li>
+            <li><Link to="controlstructure">Control Structure</Link></li>
             <li><Link to="practiceq">MCQs</Link></li>
           
           </ul>
