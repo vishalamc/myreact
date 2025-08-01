@@ -45,7 +45,7 @@ const LandingPage = () => {
     {
       title: 'Computer Studies',
       img: '/computer.jpg',
-      path: '/computer-lectures'
+      path: '/videolectures'
     },
     {
       title: 'Languages',
