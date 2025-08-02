@@ -15,19 +15,19 @@ const LandingPage = () => {
       title: 'C++ Programming',
       desc: 'Dive into the core concepts and build strong programming fundamentals.',
       path: '/CppComingSoon',
-      external: true
+   
     },
     {
       title: 'Java Programming',
       desc: 'Strong foundations make powerful programmers. Think logically. Code in Java.',
       path: '/CppComingSoon',
-      external: true
+
     },
     {
       title: 'Python Programming',
       desc: 'Start simple. Grow scalable. Learn Python. Where fundamentals meet real-world coding.',
       path: '/CppComingSoon',
-      external: true
+
     }
   ];
 
@@ -139,3 +139,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
