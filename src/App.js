@@ -21,6 +21,7 @@ import Otherop from "./pages/Otherop";
 import Increment from "./pages/Increment";
 import Partialcode from "./pages/Partialcode";
 import Controlstructure from "./pages/Controlstructure"
+import CppComingSoon from "./pages/CppComingSoon"
 function App() {
   return (
     <Router>
@@ -49,6 +50,7 @@ function App() {
        
         </Route>
          <Route path="videolectures" element={<Videolectures />} />
+      <Route path="cppComingSoon" element={<CppComingSoon />} />
       </Routes>
     </Router>
   );
