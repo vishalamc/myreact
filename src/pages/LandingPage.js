@@ -14,19 +14,19 @@ const LandingPage = () => {
     {
       title: 'C++ Programming',
       desc: 'Dive into the core concepts and build strong programming fundamentals.',
-      path: 'https://www.kumartut.co.in/cpp',
+      path: '/CppComingSoon',
       external: true
     },
     {
       title: 'Java Programming',
       desc: 'Strong foundations make powerful programmers. Think logically. Code in Java.',
-      path: 'https://www.kumartut.co.in/Java',
+      path: '/CppComingSoon',
       external: true
     },
     {
       title: 'Python Programming',
       desc: 'Start simple. Grow scalable. Learn Python. Where fundamentals meet real-world coding.',
-      path: 'https://www.kumartut.co.in/Python',
+      path: '/CppComingSoon',
       external: true
     }
   ];
@@ -35,12 +35,12 @@ const LandingPage = () => {
     {
       title: 'Mathematics',
       img: '/math.jpg',
-      path: '/math-lectures'
+      path: '/CppComingSoon'
     },
     {
       title: 'Science',
       img: '/science.jpg',
-      path: '/science-lectures'
+      path: '/CppComingSoon'
     },
     {
       title: 'Computer Studies',
@@ -50,7 +50,7 @@ const LandingPage = () => {
     {
       title: 'Languages',
       img: '/lang.jpg',
-      path: '/language-lectures'
+      path: '/CppComingSoon'
     }
   ];
 
