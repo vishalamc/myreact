@@ -1,6 +1,6 @@
 // pages/Constant.js
 import React from 'react';
-import { Typography, Box,Card, CardContent, } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 
 const Constant = () => {
   return (
@@ -10,7 +10,7 @@ const Constant = () => {
         Constant in C
       </Typography>
 
-      <Typography variant="body1" sx={{ mb: 2 }}>
+      <Typography align='justify' variant="body1" sx={{ mb: 2 }}>
         A <strong>constant</strong> is a fixed value that does not change during the execution of a program.
         It is also called a <strong>read-only</strong> value. Constants can be of types like integer, floating-point, string, or character.
         They must be initialized when declared; otherwise, they may hold garbage values.
@@ -25,9 +25,9 @@ const Constant = () => {
       </Typography>
 
       <Typography variant="subtitle1" gutterBottom color="secondary">
-        Example 1: Using <code>const</code>
+       <b>Example 1:</b> Using <code>const</code>
       </Typography>
-      <Typography component="pre" sx={{ backgroundColor: '#f5f5f5', p: 2, borderRadius: 2 }}>
+      <Typography component="pre" sx={{ backgroundColor: 'rgba(29, 77, 7, 0.23)', p: 2, borderRadius: 2 }}>
 {`#include <stdio.h>
 int main() {
     const float PI = 3.14; 
@@ -37,9 +37,9 @@ int main() {
       </Typography>
 
       <Typography variant="subtitle1" gutterBottom color="secondary" sx={{ mt: 2 }}>
-        Example 2: Using <code>#define</code>
+      <strong>  Example 2:</strong> Using <code>#define</code>
       </Typography>
-      <Typography component="pre" sx={{ backgroundColor: '#f5f5f5', p: 2, borderRadius: 2 }}>
+      <Typography component="pre" sx={{ backgroundColor: 'rgba(29, 77, 7, 0.23)', p: 2, borderRadius: 2 }}>
 {`#include <stdio.h>
 #define PI 3.14
 int main() {
@@ -54,7 +54,7 @@ int main() {
       <Box sx={{ overflowX: 'auto', mt: 1 }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff' }}>
           <thead>
-            <tr style={{ background: '#e3f2fd' }}>
+            <tr style={{ background: 'rgba(29, 77, 7, 0.23)' }}>
               <th style={{ border: '1px solid #ccc', padding: '8px' }}>Feature</th>
               <th style={{ border: '1px solid #ccc', padding: '8px' }}>const</th>
               <th style={{ border: '1px solid #ccc', padding: '8px' }}>#define</th>
@@ -63,28 +63,28 @@ int main() {
           <tbody>
             <tr>
               <td style={{ border: '1px solid #ccc', padding: '8px' }}>Handled by</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>✅ Compiler</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>⚠️ Preprocessor</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Compiler</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Preprocessor</td>
             </tr>
             <tr>
               <td style={{ border: '1px solid #ccc', padding: '8px' }}>Memory Allocated</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>✅ Yes</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>❌ No</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Yes</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>No</td>
             </tr>
             <tr>
               <td style={{ border: '1px solid #ccc', padding: '8px' }}>Type Safety</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>✅ Enforced</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>❌ Not Enforced</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Enforced</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Not Enforced</td>
             </tr>
             <tr>
               <td style={{ border: '1px solid #ccc', padding: '8px' }}>Scope Rules</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>✅ Block/Function/Global</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>❌ Global only</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Block/Function/Global</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>Global only</td>
             </tr>
             <tr>
               <td style={{ border: '1px solid #ccc', padding: '8px' }}>Error Checking</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>✅ At compile-time</td>
-              <td style={{ border: '1px solid #ccc', padding: '8px' }}>❌ None</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>At compile-time</td>
+              <td style={{ border: '1px solid #ccc', padding: '8px' }}>None</td>
             </tr>
           </tbody>
         </table>
