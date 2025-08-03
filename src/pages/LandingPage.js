@@ -15,19 +15,19 @@ const LandingPage = () => {
       title: 'C++ Programming',
       desc: 'Dive into the core concepts and build strong programming fundamentals.',
       path: '/CppComingSoon',
-   
+      external: true
     },
     {
       title: 'Java Programming',
       desc: 'Strong foundations make powerful programmers. Think logically. Code in Java.',
       path: '/CppComingSoon',
-
+      external: true
     },
     {
       title: 'Python Programming',
       desc: 'Start simple. Grow scalable. Learn Python. Where fundamentals meet real-world coding.',
       path: '/CppComingSoon',
-
+      external: true
     }
   ];
 
@@ -125,18 +125,17 @@ const LandingPage = () => {
       <section id="contact" className="contact">
         <h2 className="section-title">Get in Touch</h2>
         <div className="contact-details">
-          <p><strong>Name:</strong> Kumar Vishal</p>
-          <p><strong>Address:</strong> Kasba, Purnia, Bihar</p>
-          <p><strong>Phone:</strong> 7808625336</p>
+          <p align='left'><strong>Name:</strong> Kumar Vishal</p>
+          <p align='left'><strong>Address:</strong> Kasba, Purnia, Bihar</p>
+          <p align='left'><strong>Phone:</strong> 7808625336</p>
         </div>
       </section>
 
       <footer>
-        <p>© 2025 GyanManthan Kumar Vishal. All Rights Reserved.</p>
+        <p>© 2025 GyanManthan Gurukul. All Rights Reserved.</p>
       </footer>
     </div>
   );
 };
 
 export default LandingPage;
-
