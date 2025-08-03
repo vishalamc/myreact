@@ -159,7 +159,7 @@ int main() {
           <Typography variant="subtitle1" fontWeight="bold" sx={{ mb: 1 }}>
             {item.title}
           </Typography>
-          <Paper variant="outlined" sx={{ p: 2, backgroundColor: '#f7f7f7', overflowX: 'auto' }}>
+          <Paper variant="outlined" sx={{ p: 2, backgroundColor: 'rgba(29, 77, 7, 0.23)', overflowX: 'auto' }}>
             <Box
               component="pre"
               sx={{
