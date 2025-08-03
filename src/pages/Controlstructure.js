@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, Container, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import ImageCard from '../components/ImageCard';
 
 const ControlStructure = () => {
   const navigate = useNavigate();
@@ -25,11 +26,11 @@ const ControlStructure = () => {
       </Typography>
 
       <Box sx={{ textAlign: 'center', mb: 3 }}>
-        <img
-          src="/images/control_structure.png"
-          alt="Control Structure"
-          style={{ maxWidth: '100%', height: 'auto' }}
-        />
+<ImageCard 
+  src="/control.png" 
+  alt="Control Structure" 
+  caption="Control Structure"
+/>
       </Box>
 
       <Typography variant="h5" gutterBottom color='secondary'>
@@ -57,6 +58,16 @@ const ControlStructure = () => {
 
       <Typography variant="body1" align="justify" sx={{ mb: 2 }}>
         <strong>Example:</strong>
+         <Box
+                component="pre"
+                sx={{
+                  backgroundColor: 'rgba(29, 77, 7, 0.23)',
+                  p: 2,
+                  borderRadius: 1,
+                  fontFamily: 'monospace',
+                  overflowX: 'auto',
+                }}
+              >
         <pre>
 {`#include <stdio.h>
 int main()
@@ -69,7 +80,7 @@ int main()
     }
     return 0;
 }`}
-        </pre>
+        </pre></Box>
       </Typography>
 
       <Typography variant="body1" align="justify" sx={{ mb: 2 }}>
@@ -85,16 +96,27 @@ Welcome`}</pre>
 
       <Typography variant="body1" align="justify" sx={{ mb: 2 }}>
         <strong>For example:</strong>
+        <Box
+                component="pre"
+                sx={{
+                  backgroundColor: 'rgba(29, 77, 7, 0.23)',
+                  p: 2,
+                  borderRadius: 1,
+                  fontFamily: 'monospace',
+                  overflowX: 'auto',
+                }}
+              >
         <pre>
 {`int age = 18;
 if (age >= 18)
-    printf("Eligible to vote\\n");
+    printf("Eligible for vote\\n");
 printf("Welcome\\n");`}
         </pre>
+        </Box>
       </Typography>
 <Typography variant="body1" align="justify" sx={{ mb: 2 }}>
         <strong>Output:</strong>
-        <pre>{`Eligible for Vote
+               <pre>{`Eligible for Vote
 Welcome`}</pre>
       </Typography>
       <Typography variant="body1" align="justify" sx={{ mb: 3 }}>
