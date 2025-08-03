@@ -67,7 +67,7 @@ const Keywords = () => {
                 <Box
                   component="pre"
                   sx={{
-                    backgroundColor: '#f5f5f5',
+                    backgroundColor: 'rgba(29, 77, 7, 0.23)',
                     p: 2,
                     borderRadius: 1,
                     fontFamily: 'monospace',
