@@ -118,7 +118,7 @@ else
           <Typography variant="subtitle1" fontWeight="bold" sx={{ mb: 1 }}>
             {example.title}
           </Typography>
-          <Paper variant="outlined" sx={{ backgroundColor: '#f9f9f9', p: 2, overflowX: 'auto' }}>
+          <Paper variant="outlined" sx={{ backgroundColor: 'rgba(29, 77, 7, 0.23)', p: 2, overflowX: 'auto' }}>
             <pre style={{ margin: 0, fontFamily: 'monospace', whiteSpace: 'pre-wrap' }}>
               {example.code}
             </pre>
