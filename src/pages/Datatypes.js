@@ -97,7 +97,7 @@ const Datatypes = () => {
         <Box
                     component="pre"
                     sx={{
-                      backgroundColor: '#f5f5f5',
+                      backgroundColor: 'rgba(29, 77, 7, 0.23)',
                       p: 2,
                       borderRadius: 1,
                       fontFamily: 'monospace',
@@ -113,7 +113,7 @@ const Datatypes = () => {
          <Box
                     component="pre"
                     sx={{
-                      backgroundColor: '#f5f5f5',
+                      backgroundColor: 'rgba(29, 77, 7, 0.23)',
                       p: 2,
                       borderRadius: 1,
                       fontFamily: 'monospace',
@@ -136,7 +136,7 @@ const Datatypes = () => {
 <Box
   component="pre"
   sx={{
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'rgba(29, 77, 7, 0.23)',
     padding: 2,
     borderRadius: 2,
     overflowX: 'auto',
@@ -276,7 +276,7 @@ int main()
     This example demonstrates how <strong>float</strong> and <strong>double</strong> differ in precision:
   </Typography>
 
-  <Card variant="outlined" sx={{ backgroundColor: '#f9f9f9', p: 2, mb: 2 }}>
+  <Card variant="outlined" sx={{ backgroundColor: 'rgba(29, 77, 7, 0.23)', p: 2, mb: 2 }}>
     <pre>
 {`#include <stdio.h>
 
