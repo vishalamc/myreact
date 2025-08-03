@@ -30,29 +30,58 @@ const Assignment = () => {
         <Typography variant="body1" gutterBottom>
           • During calculation, the right-hand side (RHS) is evaluated first and then assigned to the left-hand side (LHS).
         </Typography>
-        <Typography variant="body1" gutterBottom>
-          <code>int a = 10;<br/>int b = 20;<br/>int result = a + b;</code>
-        </Typography>
+        
+        <Paper variant="outlined" sx={{ p: 2, backgroundColor: 'rgba(245, 245, 245, 0.8)', mb: 2 }}>
+          <Typography component="div" sx={{ fontFamily: 'monospace', whiteSpace: 'pre-line' }}>
+            {`int a = 10;
+int b = 20;
+int result = a + b;`}
+          </Typography>
+        </Paper>
 
         <Typography variant="body1" gutterBottom>
           • The assignment expression itself returns the assigned value.
         </Typography>
-        <Paper variant="outlined" sx={{ p: 2, backgroundColor: '#f9f9f9' }}>
-          <code>int x;<br/>printf("%d", (x = 7));<br/>// Output: 7</code>
+        
+        <Paper variant="outlined" sx={{ p: 2, backgroundColor: 'rgba(29, 77, 7, 0.1)' }}>
+          <Typography component="div" sx={{ fontFamily: 'monospace', whiteSpace: 'pre-line' }}>
+            {`int x;
+printf("%d", (x = 7));`}
+          </Typography>
+          <Typography variant="caption" display="block" mt={1}>
+            {/* Output: 7 */}
+            Output: 7
+          </Typography>
         </Paper>
 
         <Typography variant="body1" gutterBottom sx={{ mt: 2 }}>
           • Multiple assignments can be chained:
         </Typography>
-        <Paper variant="outlined" sx={{ p: 2, backgroundColor: '#f9f9f9' }}>
-          <code>int a, b;<br/>a = b = 20;  // b = 20, then a = b</code>
+        
+        <Paper variant="outlined" sx={{ p: 2, backgroundColor: 'rgba(29, 77, 7, 0.1)' }}>
+          <Typography component="div" sx={{ fontFamily: 'monospace', whiteSpace: 'pre-line' }}>
+            {`int a, b;
+a = b = 20;`}
+          </Typography>
+          <Typography variant="caption" display="block" mt={1}>
+            {/* b = 20, then a = b */}
+            b = 20, then a = b
+          </Typography>
         </Paper>
 
         <Typography variant="body1" gutterBottom sx={{ mt: 2 }}>
           • Re-assignment to constants is invalid:
         </Typography>
-        <Paper variant="outlined" sx={{ p: 2, backgroundColor: '#fff0f0' }}>
-          <code>const int a = 10;<br/>a = 20;  // ❌ Error: Cannot assign to a constant</code>
+        
+        <Paper variant="outlined" sx={{ p: 2, backgroundColor: 'rgba(29, 77, 7, 0.1)' }}>
+          <Typography component="div" sx={{ fontFamily: 'monospace', whiteSpace: 'pre-line' }}>
+            {`const int a = 10;
+a = 20;`}
+          </Typography>
+          <Typography variant="caption" display="block" mt={1} color="error">
+            {/* ❌ Error: Cannot assign to a constant */}
+            ❌ Error: Cannot assign to a constant
+          </Typography>
         </Paper>
       </Box>
 
