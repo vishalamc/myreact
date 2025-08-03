@@ -15,14 +15,14 @@ const Home = () => {
           component={Link}
           to="/"
           sx={{
-            backgroundColor: '#1976d2',
+            backgroundColor: '#336b87',
             color: 'white',
             marginBottom: '20px',
             width: '100%',
             textTransform: 'none'
           }}
         >
-          Main Page
+          Home Page
         </Button>
 
         <Typography variant="h6" gutterBottom color="white">
