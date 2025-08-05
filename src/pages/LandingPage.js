@@ -38,9 +38,9 @@ const LandingPage = () => {
       path: '/CppComingSoon'
     },
     {
-      title: 'Science',
-      img: '/science.jpg',
-      path: '/CppComingSoon'
+      title: 'Gamification',
+      img: '/gamification.png',
+      path: '/gamedashboard'
     },
     {
       title: 'Computer Studies',
