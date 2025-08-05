@@ -20,8 +20,12 @@ import Bitwise from "./pages/Bitwise";
 import Otherop from "./pages/Otherop";
 import Increment from "./pages/Increment";
 import Partialcode from "./pages/Partialcode";
-import Controlstructure from "./pages/Controlstructure"
-import CppComingSoon from "./pages/CppComingSoon"
+import Controlstructure from "./pages/Controlstructure";
+import CppComingSoon from "./pages/CppComingSoon";
+import Ifelse from "./pages/Ifelse";
+import Towerofhanoi from "./pages/Towerofhanoi";
+import Gamedashboard from "./pages/Gamedashboard";
+import Computerbuilder from "./pages/Computerbuilder";
 function App() {
   return (
     <Router>
@@ -47,11 +51,15 @@ function App() {
        <Route path="increment" element={<Increment />} />
         <Route path="partialcode" element={<Partialcode />} />
          <Route path="controlstructure" element={<Controlstructure />} />
-       
+         <Route path="ifelse" element={<Ifelse />} />
         </Route>
          <Route path="videolectures" element={<Videolectures />} />
       <Route path="cppComingSoon" element={<CppComingSoon />} />
+           <Route path="gamedashboard" element={<Gamedashboard />} />
+           <Route path="/towerofhanoi" element={<Towerofhanoi numDisks={3} />} />
+      <Route path="/computerbuilder" element={<Computerbuilder />} />
       </Routes>
+      
     </Router>
   );
 }
