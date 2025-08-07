@@ -21,7 +21,7 @@ const BinaryConverterGame = () => {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" color="success">
         <Toolbar>
           <IconButton edge="start" color="inherit" onClick={() => navigate("/gamedashboard")}>
             <HomeIcon />
@@ -85,3 +85,4 @@ const BinaryConverterGame = () => {
 };
 
 export default BinaryConverterGame;
+
