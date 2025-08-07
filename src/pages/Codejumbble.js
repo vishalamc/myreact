@@ -157,7 +157,7 @@ const CodeArrangeGame = () => {
         </Grid>
       </Container>
 
-      <Box component="footer" sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
+      <Box component="footer" sx={{ p: 2, textAlign: 'center', bgcolor: 'success.main', color: 'white' }}>
         <Typography variant="body2">© 2025 GyanManthan Gurukul. All Rights Reserved.</Typography>
       </Box>
     </DndProvider>
@@ -167,3 +167,4 @@ const CodeArrangeGame = () => {
 const shuffle = (arr) => arr.sort(() => Math.random() - 0.5);
 
 export default CodeArrangeGame;
+
