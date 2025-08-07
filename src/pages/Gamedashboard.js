@@ -23,16 +23,17 @@ const games = [
   },
    {
     title: 'Binary Converter',
-    description: 'Convert between decimal and binary numbers interactively!',
+    description: 'Convert between decimal and binary numbers',
     path: '/computerbuilder',
     disabled: false,
   },
   {
-    title: 'Coming Soon',
-    description: 'More games will be added here.',
-    path: '#',
-    disabled: true,
+    title: 'Code Jumble',
+    description: 'Arrange code to get the answer',
+    path: '/codejumble',
+    disabled: false,
   },
+ 
 ];
 
 const GameDashboard = () => {
@@ -41,7 +42,7 @@ const GameDashboard = () => {
   return (
     <>
       {/* AppBar (Top Navigation) */}
-      <AppBar position="static" color="primary" elevation={3}>
+      <AppBar position="static" color="success" elevation={3}>
         <Toolbar>
           <IconButton edge="start" color="inherit" onClick={() => navigate('/')}>
             <HomeIcon />
@@ -86,7 +87,7 @@ const GameDashboard = () => {
                   </Typography>
                   <Button
                     variant="contained"
-                    color="primary"
+                    color="success"
                     fullWidth
                     disabled={game.disabled}
                     onClick={() => !game.disabled && navigate(game.path)}
