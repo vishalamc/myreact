@@ -26,6 +26,7 @@ import Ifelse from "./pages/Ifelse";
 import Towerofhanoi from "./pages/Towerofhanoi";
 import Gamedashboard from "./pages/Gamedashboard";
 import Computerbuilder from "./pages/Computerbuilder";
+import Codejumble from "./pages/Codejumbble";
 function App() {
   return (
     <Router>
@@ -58,6 +59,7 @@ function App() {
            <Route path="gamedashboard" element={<Gamedashboard />} />
            <Route path="/towerofhanoi" element={<Towerofhanoi numDisks={3} />} />
       <Route path="/computerbuilder" element={<Computerbuilder />} />
+     <Route path="/codejumble" element={<Codejumble />} />
       </Routes>
       
     </Router>
