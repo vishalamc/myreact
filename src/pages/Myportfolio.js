@@ -83,7 +83,7 @@ const PortfolioPage = () => {
     <h1>Welcome to My Portfolio</h1>
     <p>
       Teaching (Assistant Professor) & App Developer with over 15 years in education 
-      and 5 years in software development.
+      and 5 years in software industry.
     </p>
   </div>
 
@@ -157,3 +157,4 @@ const PortfolioPage = () => {
 };
 
 export default PortfolioPage;
+
