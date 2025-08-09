@@ -370,3 +370,39 @@
   font-size: 1rem;
   line-height: 1.5;
 }
+.hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.mycard {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #f1f1f1;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.chip:hover {
+  background: #4cafef;
+  color: white;
+}
