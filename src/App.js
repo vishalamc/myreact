@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga4";
 import { BrowserRouter as Router, Navigate, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Videolectures from "./pages/Videolectures"
@@ -27,11 +28,13 @@ import Towerofhanoi from "./pages/Towerofhanoi";
 import Gamedashboard from "./pages/Gamedashboard";
 import Computerbuilder from "./pages/Computerbuilder";
 import Codejumble from "./pages/Codejumbble";
+import Myportfolio from "./pages/Myportfolio";
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} /> {/* This loads first */}
+        <Route path="/" element={<LandingPage />} /> 
         <Route path="/home" element={<Home />}>
           <Route index element={<Navigate to="introduction" replace />} />
           <Route path="introduction" element={<Introduction />} />
@@ -46,22 +49,23 @@ function App() {
           <Route path="expression" element={<Expression />} />
           <Route path="assignment" element={<Assignment />} /> 
           <Route path="relational" element={<Relational />} />
-       <Route path="logical" element={<Logical />} />
-       <Route path="bitwise" element={<Bitwise />} />
-       <Route path="otherop" element={<Otherop />} />
-       <Route path="increment" element={<Increment />} />
-        <Route path="partialcode" element={<Partialcode />} />
-         <Route path="controlstructure" element={<Controlstructure />} />
-         <Route path="ifelse" element={<Ifelse />} />
+          <Route path="logical" element={<Logical />} />
+          <Route path="bitwise" element={<Bitwise />} />
+          <Route path="otherop" element={<Otherop />} />
+          <Route path="increment" element={<Increment />} />
+          <Route path="partialcode" element={<Partialcode />} />
+          <Route path="controlstructure" element={<Controlstructure />} />
+          <Route path="ifelse" element={<Ifelse />} />
         </Route>
          <Route path="videolectures" element={<Videolectures />} />
-      <Route path="cppComingSoon" element={<CppComingSoon />} />
-           <Route path="gamedashboard" element={<Gamedashboard />} />
+         <Route path="cppComingSoon" element={<CppComingSoon />} />
+         <Route path="myportfolio" element={<Myportfolio />} />
+         <Route path="gamedashboard" element={<Gamedashboard />} />
            <Route path="/towerofhanoi" element={<Towerofhanoi numDisks={3} />} />
-      <Route path="/computerbuilder" element={<Computerbuilder />} />
-     <Route path="/codejumble" element={<Codejumble />} />
-      </Routes>
-      
+           <Route path="/computerbuilder" element={<Computerbuilder />} />
+           <Route path="/codejumble" element={<Codejumble />} />
+         </Routes>
+         
     </Router>
   );
 }
