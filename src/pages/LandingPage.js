@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../pages/Landing.css';
-import { useNavigate } from 'react-router-dom';
+import ReactGA from 'react-ga4';
+import { useNavigate,Link } from 'react-router-dom';
 
 const LandingPage = () => {
   const navigate = useNavigate();
-
+  useEffect(() => {
+    ReactGA.initialize("G-JZXN8NG92Q"); // Your GA Measurement ID
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
   const courses = [
     {
       title: 'C Programming',
@@ -128,6 +132,18 @@ const LandingPage = () => {
           <p align='left'><strong>Name:</strong> Kumar Vishal</p>
           <p align='left'><strong>Address:</strong> Kasba, Purnia, Bihar</p>
           <p align='left'><strong>Phone:</strong> 7808625336</p>
+        <p align='left'>
+              <Link 
+                to="/myportfolio" 
+                style={{ 
+                  color: "#1976d2", 
+                  textDecoration: "none", 
+                  fontWeight: "bold" 
+                }}
+              >
+                View My Portfolio →
+              </Link>
+            </p>
         </div>
       </section>
 
