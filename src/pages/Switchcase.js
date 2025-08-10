@@ -152,7 +152,7 @@ int main() {
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/home/ifelse")}
         >
           Back
         </Button>
@@ -169,3 +169,4 @@ int main() {
 };
 
 export default SwitchCase;
+
