@@ -46,7 +46,7 @@ const ControlStructure = () => {
       </Typography>
 
       <Typography variant="h6" gutterBottom>
-        If statement:
+      <b>1.If statement:</b>
       </Typography>
 
       <Typography variant="body1" align="justify" sx={{ mb: 2 }}>
@@ -126,7 +126,7 @@ Welcome`}</pre>
       </Typography>
 
       <Box display="flex" justifyContent="flex-end">
-        <Button variant="contained" color="primary" onClick={() => navigate('/IfElse')}>
+        <Button variant="contained" color="primary" onClick={() => navigate('/home/ifelse')}>
           Next
         </Button>
       </Box>
