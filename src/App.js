@@ -29,6 +29,8 @@ import Gamedashboard from "./pages/Gamedashboard";
 import Computerbuilder from "./pages/Computerbuilder";
 import Codejumble from "./pages/Codejumbble";
 import Myportfolio from "./pages/Myportfolio";
+import Switchcase from "./pages/Switchcase";
+import Jump from "./pages/Jump";
 
 function App() {
   return (
@@ -39,7 +41,7 @@ function App() {
           <Route index element={<Navigate to="introduction" replace />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="variables" element={<Variables />} />
-          <Route path="loops" element={<Loops />} />
+          
           <Route path="identifier" element={<Identifier />} />
           <Route path="keyword" element={<Keyword />} />
           <Route path="datatypes" element={<Datatype />} />
@@ -56,7 +58,10 @@ function App() {
           <Route path="partialcode" element={<Partialcode />} />
           <Route path="controlstructure" element={<Controlstructure />} />
           <Route path="ifelse" element={<Ifelse />} />
-        </Route>
+          <Route path="switchcase" element={<Switchcase />} />
+          <Route path="loops" element={<Loops />} />
+           <Route path="jumpingstatements" element={<Jump />} />
+          </Route>
          <Route path="videolectures" element={<Videolectures />} />
          <Route path="cppComingSoon" element={<CppComingSoon />} />
          <Route path="myportfolio" element={<Myportfolio />} />
