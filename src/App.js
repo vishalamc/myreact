@@ -31,16 +31,24 @@ import Codejumble from "./pages/Codejumbble";
 import Myportfolio from "./pages/Myportfolio";
 import Switchcase from "./pages/Switchcase";
 import Jump from "./pages/Jump";
+import Userdefine from "./pages/Userdefine";
+import Predefine from "./pages/Predefine";
+import Functionmcq from "./pages/Functionmcq";
+import Recursive from "./pages/Recursive";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} /> 
-        <Route path="/home" element={<Home />}>
+          <Route path="/home" element={<Home />}>
           <Route index element={<Navigate to="introduction" replace />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="variables" element={<Variables />} />
+          <Route path="userdefine" element={<Userdefine />} />
+          <Route path="predefine" element={<Predefine />} />
+          <Route path="functionmcq" element={<Functionmcq />} />
+          <Route path="recursive" element={<Recursive />} />
           
           <Route path="identifier" element={<Identifier />} />
           <Route path="keyword" element={<Keyword />} />
@@ -60,7 +68,7 @@ function App() {
           <Route path="ifelse" element={<Ifelse />} />
           <Route path="switchcase" element={<Switchcase />} />
           <Route path="loops" element={<Loops />} />
-           <Route path="jumpingstatements" element={<Jump />} />
+          <Route path="jumpingstatements" element={<Jump />} />
           </Route>
          <Route path="videolectures" element={<Videolectures />} />
          <Route path="cppComingSoon" element={<CppComingSoon />} />
@@ -69,6 +77,8 @@ function App() {
            <Route path="/towerofhanoi" element={<Towerofhanoi numDisks={3} />} />
            <Route path="/computerbuilder" element={<Computerbuilder />} />
            <Route path="/codejumble" element={<Codejumble />} />
+         
+        
          </Routes>
          
     </Router>
