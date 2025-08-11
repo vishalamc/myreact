@@ -52,10 +52,22 @@ const Home = () => {
              <ListItem disablePadding>
             <ListItemText primary="Skill Test" primaryTypographyProps={{ style: { color: '#ffd54f', fontWeight: 'bold' } }} />
           </ListItem>
-          <ul className="sub-list">
+            <ul className="sub-list">
             <li><Link to="partialcode">PartialCode</Link></li>
             </ul>
         </List>
+         <List>
+<ListItem disablePadding>
+            <ListItemText primary="Functions" primaryTypographyProps={{ style: { color: '#ffd54f', fontWeight: 'bold' } }} />
+          </ListItem>
+          <ul className="sub-list">
+            <li><Link to="userdefine">User Define Functions</Link></li>
+            <li><Link to="predefine">Predefine Functions</Link></li>
+            <li><Link to="recursive">Recursive Functions</Link></li>
+            <li><Link to="functionmcq">MCQs</Link></li>
+           </ul>
+
+ </List>
       </div>
       <div className="main-content">
         <Outlet />
