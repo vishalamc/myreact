@@ -35,6 +35,11 @@ import Userdefine from "./pages/Userdefine";
 import Predefine from "./pages/Predefine";
 import Functionmcq from "./pages/Functionmcq";
 import Recursive from "./pages/Recursive";
+import Array from "./pages/Array";
+import Arraymcq from "./pages/Arraymcq";
+import Functionarry from "./pages/Functionarray";
+import Arraytypes from "./pages/Arraytypes";
+
 
 function App() {
   return (
@@ -49,7 +54,11 @@ function App() {
           <Route path="predefine" element={<Predefine />} />
           <Route path="functionmcq" element={<Functionmcq />} />
           <Route path="recursive" element={<Recursive />} />
-          
+          <Route path="array" element={<Array />} />
+          <Route path="arraytypes" element={<Arraytypes />} />
+          <Route path="functionarray" element={<Functionarry />} />
+          <Route path="arraymcq" element={<Arraymcq />} />
+
           <Route path="identifier" element={<Identifier />} />
           <Route path="keyword" element={<Keyword />} />
           <Route path="datatypes" element={<Datatype />} />
