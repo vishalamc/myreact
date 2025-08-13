@@ -1,231 +1,229 @@
-import React, { useState } from 'react';
-import {
-  Typography,
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Collapse,
-  Button,
-} from '@mui/material';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+import React, { useState } from "react";
+import { Box, Typography, RadioGroup, FormControlLabel, Radio, Button, Grid, Paper } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-const mcqData = [
-  {
-    title: "User-defined Functions",
-    questions: [
-      {
-        question: "Which of the following is a correct example of a user-defined function in C?",
-        options: [
-          "printf(\"Hello\");",
-          "int sum(int a, int b) { return a + b; }",
-          "sqrt(16);",
-          "main()"
-        ],
-        answer: "int sum(int a, int b) { return a + b; }",
-      },
-      {
-        question: "What is the correct syntax for declaring a function in C?",
-        options: [
-          "function sum(int a, int b);",
-          "declare sum(int a, int b);",
-          "int sum(int a, int b);",
-          "sum(int a, int b);"
-        ],
-        answer: "int sum(int a, int b);",
-      },
-      {
-        question: "What is the main purpose of a user-defined function?",
-        options: [
-          "To store data permanently",
-          "To divide the program into reusable blocks",
-          "To improve internet speed",
-          "To control operating system functions"
-        ],
-        answer: "To divide the program into reusable blocks",
-      },
-      {
-        question: "Which keyword is used to return a value from a function in C?",
-        options: ["break", "return", "continue", "goto"],
-        answer: "return",
-      },
-      {
-        question: "If a function does not return any value, which return type should be used?",
-        options: ["int", "void", "float", "null"],
-        answer: "void",
-      },
-      {
-        question: "Which of the following is NOT part of a function definition?",
-        options: ["Function body", "Function name", "Return type", "Header files"],
-        answer: "Header files",
-      },
-      {
-        question: "What is the process of calling a function within the same function called?",
-        options: ["Overloading", "Recursion", "Iteration", "Branching"],
-        answer: "Recursion",
-      },
-      {
-        question: "Which of the following correctly calls a function named 'display' with no parameters?",
-        options: ["display;", "display()", "display{}", "call display();"],
-        answer: "display()",
-      },
-      {
-        question: "What will happen if a function is declared but not defined?",
-        options: [
-          "The program will compile and run",
-          "Compilation error",
-          "Infinite loop",
-          "Logical error only"
-        ],
-        answer: "Compilation error",
-      },
-      {
-        question: "Where can a function be defined in a C program?",
-        options: [
-          "Only before main()",
-          "Only inside main()",
-          "Before or after main()",
-          "Nowhere in C"
-        ],
-        answer: "Before or after main()",
-      }
-    ]
-  },
-  {
-    title: "Predefined Functions",
-    questions: [
-      {
-        question: "Which of the following is a predefined function in C?",
-        options: ["myFunction()", "calculate()", "printf()", "sumNumbers()"],
-        answer: "printf()",
-      },
-      {
-        question: "Where are most predefined functions in C stored?",
-        options: [
-          "In user-created header files",
-          "In built-in header files like stdio.h",
-          "Inside the main() function",
-          "In the operating system kernel"
-        ],
-        answer: "In built-in header files like stdio.h",
-      },
-      {
-        question: "What is the return type of the 'sqrt()' function from math.h?",
-        options: ["int", "float", "double", "long"],
-        answer: "double",
-      },
-      {
-        question: "Which header file is needed for using the strlen() function?",
-        options: ["stdio.h", "string.h", "math.h", "stdlib.h"],
-        answer: "string.h",
-      },
-      {
-        question: "What does the 'abs()' function return?",
-        options: [
-          "Absolute value of a number",
-          "Average of numbers",
-          "Address of a variable",
-          "ASCII value"
-        ],
-        answer: "Absolute value of a number",
-      },
-      {
-        question: "Which of the following functions is used to allocate memory dynamically?",
-        options: ["malloc()", "scanf()", "printf()", "exit()"],
-        answer: "malloc()",
-      },
-      {
-        question: "Which predefined function is used to terminate a C program immediately?",
-        options: ["break()", "exit()", "stop()", "terminate()"],
-        answer: "exit()",
-      },
-      {
-        question: "What does the pow(x, y) function do?",
-        options: [
-          "Calculates y raised to the power x",
-          "Calculates x raised to the power y",
-          "Calculates x modulo y",
-          "Multiplies x and y"
-        ],
-        answer: "Calculates x raised to the power y",
-      },
-      {
-        question: "What does the getchar() function do?",
-        options: [
-          "Reads a single character from the keyboard",
-          "Prints a character",
-          "Clears the screen",
-          "Reads an integer"
-        ],
-        answer: "Reads a single character from the keyboard",
-      },
-      {
-        question: "Which of these is NOT a predefined function in C?",
-        options: ["printf()", "scanf()", "sort()", "strlen()"],
-        answer: "sort()",
-      },
-    ],
-  },
-];
+export default function FunctionMCQ() {
+  const navigate = useNavigate();
 
-const MCQPage = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-  const [showAnswers, setShowAnswers] = useState({});
+  const questions = [
+    // User-defined function MCQs
+    {
+      question: "Which keyword is used to define a user-defined function in CWhich of the following is a correct example of a user-defined function in C??",
+      options: ["function", "func", "void/int/return type", "define"],
+      answer: "void/int/return type",
+    },
+    {
+      question: "In C, the 'main()' function is:",
+      options: ["User-defined", "Predefined", "Both", "Neither"],
+      answer: "Predefined",
+    },
+    {
+      question: "Which of the following is NOT a valid return type for a user-defined function in C?",
+      options: ["void", "int", "string", "float"],
+      answer: "string",
+    },
+    {
+      question: "What is the correct syntax to declare a function that takes two integers and returns an integer?",
+      options: [
+        "int sum(int a, int b);",
+        "function sum(int a, int b);",
+        "sum(int a, int b) int;",
+        "declare sum(int, int);"
+      ],
+      answer: "int sum(int a, int b);",
+    },
+    {
+      question: "Which part of the program must a function be defined before it is called?",
+      options: [
+        "Before main() only",
+        "After main() only",
+        "Either before or after main() with a declaration",
+        "It cannot be after main()"
+      ],
+      answer: "Either before or after main() with a declaration",
+    },
+    {
+      question: "Recursive functions are:",
+      options: [
+        "Functions that call themselves",
+        "Functions called only once",
+        "Functions without return value",
+        "Functions that return arrays"
+      ],
+      answer: "Functions that call themselves",
+    },
+    {
+      question: "Which of these is NOT a benefit of using user-defined functions?",
+      options: [
+        "Code reusability",
+        "Modularity",
+        "Reduced code readability",
+        "Easy debugging"
+      ],
+      answer: "Reduced code readability",
+    },
+    {
+      question: "In C, arguments passed to functions are:",
+      options: [
+        "Always passed by reference",
+        "Always passed by value",
+        "Passed by value, unless using pointers",
+        "Passed randomly"
+      ],
+      answer: "Passed by value, unless using pointers",
+    },
+    {
+      question: "What happens if a function doesn’t have a return statement and is not 'void'?",
+      options: [
+        "Compiler error",
+        "Returns garbage value",
+        "Returns 0",
+        "Crashes the program"
+      ],
+      answer: "Returns garbage value",
+    },
+    {
+      question: "Function prototypes are used to:",
+      options: [
+        "Avoid multiple definitions",
+        "Declare the function’s interface before use",
+        "Reduce memory usage",
+        "Automatically generate function code"
+      ],
+      answer: "Declare the function’s interface before use",
+    },
 
-  const handleToggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    // Predefined function MCQs
+    {
+      question: "Which header file contains the predefined function 'printf'?",
+      options: ["stdlib.h", "stdio.h", "string.h", "math.h"],
+      answer: "stdio.h",
+    },
+    {
+      question: "The 'strlen' function is used to:",
+      options: [
+        "Find the number of characters in a string excluding null terminator",
+        "Find the number of characters including null terminator",
+        "Count spaces in a string",
+        "Find ASCII value of characters"
+      ],
+      answer: "Find the number of characters in a string excluding null terminator",
+    },
+    {
+      question: "What is the return type of the 'sqrt' function in C?",
+      options: ["int", "float", "double", "void"],
+      answer: "double",
+    },
+    {
+      question: "Which library contains the predefined function 'pow'?",
+      options: ["math.h", "stdlib.h", "string.h", "stdio.h"],
+      answer: "math.h",
+    },
+    {
+      question: "What will 'abs(-5)' return?",
+      options: ["-5", "5", "0", "Error"],
+      answer: "5",
+    },
+    {
+      question: "The 'strcpy' function is used for:",
+      options: [
+        "Copying one string to another",
+        "Comparing two strings",
+        "Concatenating two strings",
+        "Splitting a string"
+      ],
+      answer: "Copying one string to another",
+    },
+    {
+      question: "Which predefined function is used to allocate memory at runtime?",
+      options: ["malloc", "calloc", "realloc", "All of the above"],
+      answer: "All of the above",
+    },
+    {
+      question: "What is the purpose of the 'exit()' function?",
+      options: [
+        "Terminate the program immediately",
+        "Exit from a loop",
+        "Close a file",
+        "Pause program execution"
+      ],
+      answer: "Terminate the program immediately",
+    },
+    {
+      question: "Which predefined function is used to generate a random number?",
+      options: ["rand()", "random()", "generate()", "number()"],
+      answer: "rand()",
+    },
+    {
+      question: "Which of the following requires including 'time.h' header file?",
+      options: ["time()", "rand()", "strlen()", "sqrt()"],
+      answer: "time()",
+    }
+  ];
+
+  const [answers, setAnswers] = useState({});
+  const [score, setScore] = useState(null);
+
+  const handleChange = (qIndex, option) => {
+    setAnswers({ ...answers, [qIndex]: option });
   };
 
-  const toggleAnswers = (index) => {
-    setShowAnswers((prev) => ({ ...prev, [index]: !prev[index] }));
+  const handleSubmit = () => {
+    let count = 0;
+    questions.forEach((q, i) => {
+      if (answers[i] === q.answer) {
+        count++;
+      }
+    });
+    setScore(count);
   };
 
   return (
-    <Box sx={{ p: 4 }}>
-      <Typography variant="h4" gutterBottom color='primary'>
-      Functions in C MCQs
+    <Box sx={{ p: { xs: 2, md: 4 } }}>
+      <Typography variant="h4" gutterBottom color="primary">
+        Function MCQs (User-defined & Predefined)
       </Typography>
 
-      <List>
-        {mcqData.map((topic, index) => (
-          <Box key={index}>
-            <ListItem disablePadding>
-              <ListItemButton onClick={() => handleToggle(index)}>
-                <ListItemText primary={topic.title} />
-                {openIndex === index ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-            </ListItem>
-            <Collapse in={openIndex === index} timeout="auto" unmountOnExit>
-              <Box sx={{ p: 2, border: '1px solid #ccc', borderRadius: 1, mt: 1 }}>
-                {topic.questions.map((q, qIndex) => (
-                  <Box key={qIndex} sx={{ mb: 2 }}>
-                    <Typography variant="subtitle1">
-                      {qIndex + 1}. {q.question}
-                    </Typography>
-                    <ul>
-                      {q.options.map((option, oIndex) => (
-                        <li key={oIndex}>{option}</li>
-                      ))}
-                    </ul>
-                    {showAnswers[index] && (
-                      <Typography variant="body2" color="green">
-                        Answer: {q.answer}
-                      </Typography>
-                    )}
-                  </Box>
-                ))}
-                <Button variant="outlined" onClick={() => toggleAnswers(index)}>
-                  {showAnswers[index] ? 'Hide Answers' : 'Show Answers'}
-                </Button>
-              </Box>
-            </Collapse>
-          </Box>
-        ))}
-      </List>
+      {questions.map((q, index) => (
+        <Paper key={index} sx={{ p: 2, mb: 2 }}>
+          <Typography variant="h6">
+            {index + 1}. {q.question}
+          </Typography>
+          <RadioGroup
+            value={answers[index] || ""}
+            onChange={(e) => handleChange(index, e.target.value)}
+          >
+            {q.options.map((opt, i) => (
+              <FormControlLabel
+                key={i}
+                value={opt}
+                control={<Radio />}
+                label={opt}
+              />
+            ))}
+          </RadioGroup>
+        </Paper>
+      ))}
+
+      <Grid container spacing={2} sx={{ mt: 3 }}>
+
+        <Grid item xs={12} sm={4}>
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={handleSubmit}
+          >
+            Submit
+          </Button>
+        </Grid>
+      </Grid>
+
+      {score !== null && (
+        <Typography variant="h6" color="success.main" sx={{ mt: 2 }}>
+          Your Score: {score} / {questions.length}
+        </Typography>
+      )}
     </Box>
   );
-};
-
-export default MCQPage;
+}
