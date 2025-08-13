@@ -57,7 +57,7 @@ const Home = () => {
             </ul>
         </List>
          <List>
-<ListItem disablePadding>
+        <ListItem disablePadding>
             <ListItemText primary="Functions" primaryTypographyProps={{ style: { color: '#ffd54f', fontWeight: 'bold' } }} />
           </ListItem>
           <ul className="sub-list">
@@ -67,6 +67,16 @@ const Home = () => {
             <li><Link to="functionmcq">MCQs</Link></li>
            </ul>
 
+ </List>
+   <List>
+        <ListItem disablePadding>
+            <ListItemText primary="Array" primaryTypographyProps={{ style: { color: '#ffd54f', fontWeight: 'bold' } }} />
+          </ListItem>
+          <ul className="sub-list">
+            <li><Link to="array">Array and its types</Link></li>
+            <li><Link to="functionarray">Array in Functions</Link></li>
+            <li><Link to="arraymcq">MCQs</Link></li>
+           </ul>
  </List>
       </div>
       <div className="main-content">
