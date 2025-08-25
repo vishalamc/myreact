@@ -1,108 +1,153 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  Button,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Container,
-} from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-const games = [
-  {
-    title: 'Tower of Hanoi',
-    description: 'Solve the classic Tower of Hanoi puzzle!',
-    path: '/towerofhanoi',
-  },
-   {
-    title: 'Binary Converter',
-    description: 'Convert between decimal and binary numbers',
-    path: '/computerbuilder',
-    disabled: false,
-  },
-  {
-    title: 'Code Jumble',
-    description: 'Arrange code to get the answer',
-    path: '/codejumble',
-    disabled: false,
-  },
- 
-];
-
-const GameDashboard = () => {
+export default function GameDashboard() {
   const navigate = useNavigate();
 
+  const games = [
+    {
+      title: 'Tower of Hanoi',
+      description: 'Solve the classic Tower of Hanoi puzzle with visualized moves.',
+      path: '/towerofhanoi',
+    },
+    {
+      title: 'Binary Converter',
+      description: 'Convert between numeric systems with step-by-step guidance.',
+      path: '/computerbuilder',
+    },
+    {
+      title: 'Code Jumble', 
+      description: 'Reconstruct broken code segments through logical arrangement.',
+      path: '/codejumble',
+    },
+  ];
+
   return (
-    <>
-      {/* AppBar (Top Navigation) */}
-      <AppBar position="static" color="success" elevation={3}>
-        <Toolbar>
-          <IconButton edge="start" color="inherit" onClick={() => navigate('/')}>
-            <HomeIcon />
-          </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Click to Go Home 
-          </Typography>
-        </Toolbar>
-      </AppBar>
+    <div className="game-dashboard">
+      {/* Header */}
+      <div className="header-section">
+        <SportsEsportsIcon className="header-icon" />
+        <h1>Game Challenges</h1>
+        <p>Pick a challenge and test your skills</p>
+      </div>
 
-      {/* Main Content */}
-      <Container sx={{ mt: 4 }}>
-        <Box textAlign="center" mb={4}>
-          <SportsEsportsIcon sx={{ fontSize: 50, color: 'primary.main' }} />
-          <Typography variant="h4" fontWeight="bold" mt={2}>
-            Welcome to the Game Zone!
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
-            Select a game to play and have fun 🎮
-          </Typography>
-        </Box>
+      {/* Cards */}
+      <div className="game-grid">
+        {games.map((game, i) => (
+          <div className="game-card" key={i}>
+            <div className="card-body">
+              <h2>{game.title}</h2>
+              <p>{game.description}</p>
+              <button className="start-btn" onClick={() => navigate(game.path)}>
+                <PlayArrowIcon className="btn-icon" />
+                Start Challenge
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
 
-        <Grid container spacing={4} justifyContent="center">
-          {games.map((game, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
-              <Card
-                elevation={5}
-                sx={{
-                  height: '100%',
-                  transition: 'transform 0.3s',
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                  },
-                }}
-              >
-                <CardContent>
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
-                    {game.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    {game.description}
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    color="success"
-                    fullWidth
-                    disabled={game.disabled}
-                    onClick={() => !game.disabled && navigate(game.path)}
-                    sx={{ mt: 2 }}
-                  >
-                    {game.disabled ? 'Coming Soon' : 'Play Now'}
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </>
+      <style>{`
+        .game-dashboard {
+          padding: 3rem 1rem;
+          background: inherit;
+          font-family: 'Inter', sans-serif;
+          color: #fff;
+        }
+
+        .header-section {
+          text-align: center;
+          margin-bottom: 2.5rem;
+        }
+
+        .header-icon {
+          font-size: 3rem;
+          color: #60a5fa;
+          margin-bottom: 0.5rem;
+        }
+
+        .header-section h1 {
+          font-size: 2.5rem;
+          font-weight: 800;
+          margin-bottom: 0.3rem;
+          background: linear-gradient(to right, #60a5fa, #f472b6);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .header-section p {
+          color: #d1d5db;
+          font-size: 1.1rem;
+        }
+
+        .game-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+        }
+
+        .game-card {
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 1rem;
+          padding: 1.5rem;
+          backdrop-filter: blur(6px);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+        }
+
+        .card-body h2 {
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .card-body p {
+          color: #cbd5e1;
+          margin-bottom: 1.5rem;
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+
+        .start-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+          width: 100%;
+          padding: 1rem;
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: white;
+          background: linear-gradient(90deg, #60a5fa, #3b82f6);
+          border: none;
+          border-radius: 0.75rem;
+          cursor: pointer;
+          transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .start-btn:hover {
+          background: linear-gradient(90deg, #3b82f6, #2563eb);
+          transform: translateY(-2px);
+        }
+
+        .btn-icon {
+          font-size: 1.5rem;
+        }
+      `}</style>
+    </div>
   );
-};
-
-export default GameDashboard;
+}
