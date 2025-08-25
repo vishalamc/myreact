@@ -50,7 +50,7 @@ const lessons = [
     items: [
       { label: "Array", path: "array" },
       { label: "Array and its Types", path: "arraytypes" },
-      { label: "Array in Functions", path: "arrayfunction" },
+      { label: "Array in Functions", path: "functionarray" },
       { label: "MCQs", path: "arraymcq" },
     ],
   },
@@ -164,3 +164,4 @@ const LearnC = () => {
 };
 
 export default LearnC;
+
