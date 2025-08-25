@@ -86,10 +86,10 @@ a = 20;`}
       </Box>
 
       <Box display="flex" justifyContent="space-between" mt={5}>
-        <Button variant="outlined" onClick={() => navigate('/home/operator')}>
+        <Button variant="outlined" onClick={() => navigate('/learnc/operator')}>
           Back
         </Button>
-        <Button variant="contained" onClick={() => navigate('/home/relational')}>
+        <Button variant="contained" onClick={() => navigate('/learnc/relational')}>
           Next
         </Button>
       </Box>
