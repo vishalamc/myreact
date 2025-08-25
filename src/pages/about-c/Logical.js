@@ -127,10 +127,10 @@ else
       ))}
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 5 }}>
-        <Button variant="outlined" onClick={() => navigate('/home/relational')}>
+        <Button variant="outlined" onClick={() => navigate('/learnc/relational')}>
           Back
         </Button>
-        <Button variant="contained" onClick={() => navigate('/home/bitwise')}>
+        <Button variant="contained" onClick={() => navigate('/learnc/bitwise')}>
           Next
         </Button>
       </Box>
