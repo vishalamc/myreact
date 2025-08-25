@@ -21,7 +21,8 @@
     "web-vitals": "^2.1.4",
     "react-ga4": "^2.1.0",
     "react-icons": "^5.2.1",
-    "lucide-react": "^0.453.0"
+    "lucide-react": "^0.453.0",
+    "framer-motion": "^11.3.17"
   },
   "scripts": {
     "start": "react-scripts start",
