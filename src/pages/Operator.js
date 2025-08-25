@@ -176,7 +176,7 @@ int main() {
       ))}
 
       <Box textAlign="center" mt={5}>
-        <Button variant="contained" onClick={() => navigate('/home/assignment')}>
+        <Button variant="contained" onClick={() => navigate('/learnc/assignment')}>
           Next
         </Button>
       </Box>
