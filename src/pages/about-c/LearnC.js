@@ -1,4 +1,5 @@
 // src/pages/LearnC.js
+
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import {
@@ -35,7 +36,6 @@ const lessons = [
       { label: "MCQs", path: "practiceq" },
     ],
   },
-  
   {
     group: "Functions",
     items: [
@@ -65,7 +65,7 @@ const LearnC = () => {
       <div key={section.group}>
         <Typography
           variant="subtitle1"
-          sx={{ mt: 2, mb: 1, fontWeight: "bold", color: "#ddd" }}
+          sx={{ mt: 2, mb: 1, fontWeight: "bold", color: "#yellow" }}
         >
           {section.group}
         </Typography>
@@ -126,7 +126,7 @@ const LearnC = () => {
                       <ListItemText
                         primary={section.group}
                         primaryTypographyProps={{
-                          sx: { fontWeight: "bold", color: "#2e3b55" },
+                          sx: { fontWeight: "bold", color: "yellow" },
                         }}
                       />
                     </ListItem>
@@ -137,7 +137,12 @@ const LearnC = () => {
                         component={Link}
                         to={lesson.path}
                       >
-                        <ListItemText primary={lesson.label} />
+                        <ListItemText
+                          primary={lesson.label}
+                          primaryTypographyProps={{
+                            sx: { color: "#000" }, // 🔧 Text is now black on mobile
+                          }}
+                        />
                       </ListItem>
                     ))}
                   </React.Fragment>
