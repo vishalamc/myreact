@@ -74,6 +74,8 @@
   background: #2e3b55; /* light background for phone menu */
   height: 100%;
   color: black;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 .mobile-link {
@@ -102,3 +104,4 @@
     padding: 15px;
   }
 }
+
