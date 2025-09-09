@@ -1,18 +1,34 @@
-import React from "react";
-import { FaGithub } from "react-icons/fa";
+import React, { useEffect } from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  useEffect(() => {
+    // Load the Elfsight script only once
+    if (!document.getElementById("elfsight-script")) {
+      const script = document.createElement("script");
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      script.id = "elfsight-script";
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <footer style={styles.footer}>
       <div style={styles.container}>
-        {/* Text */}
+        {/* Main Text */}
         <p style={styles.text}>
           &copy; {currentYear} <span style={styles.brand}>GyanManthan Gurukul</span>. All rights reserved.
         </p>
 
-       
+        {/* Visitor Counter */}
+        <div
+          className="elfsight-app-31b9647a-93c9-4c0b-b99a-d2a05d33d006"
+          data-elfsight-app-lazy
+          style={{ margin: "12px 0" }}
+        ></div>
+
       
       </div>
     </footer>
@@ -42,33 +58,10 @@ const styles = {
     color: "#fbbf24",
     fontWeight: "700",
   },
-  button: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "8px",
-    padding: "8px 18px",
-    background: "linear-gradient(135deg, #6a11cb, #2575fc)",
-    color: "#fff",
-    borderRadius: "8px",
-    fontSize: "0.9rem",
-    fontWeight: "500",
+  link: {
+    color: "#fbbf24",
     textDecoration: "none",
-    boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-    transition: "all 0.3s ease",
-  },
-  buttonHover: {
-    transform: "scale(1.05)",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.4)",
-  },
-  icon: {
-    fontSize: "1rem",
-  },
-  buttonContainer: {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    gap: "10px",
-    marginTop: "10px",
+    fontWeight: "500",
   },
 };
 
