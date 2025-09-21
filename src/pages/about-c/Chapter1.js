@@ -231,13 +231,16 @@ const PracticePrograms = () => {
                       </Button>
                       {showAnswer[key] && (
                         <Box
-                          sx={{
-                            mt: 1,
-                            p: 1,
-                            backgroundColor: "#e0e0e0",
-                            borderRadius: 1,
-                          }}
-                        >
+  sx={{
+    mt: { xs: 1, sm: 2, md: 3 }, // smaller → bigger margins
+    p: { xs: 1, sm: 2, md: 3 },  // padding adjusts per screen size
+    backgroundColor: "#e0e0e0",
+    borderRadius: 1,
+    fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" }, // text size responsive
+    width: { xs: "100%", sm: "90%", md: "70%" }, // shrink on larger screens
+    mx: "auto", // centers horizontally
+  }}
+>
                           <pre>{prog.answer}</pre>
                         </Box>
                       )}
