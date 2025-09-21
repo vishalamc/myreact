@@ -1,5 +1,4 @@
 // src/pages/LearnC.js
-
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import {
@@ -34,6 +33,7 @@ const lessons = [
       { label: "Expressions and Statements", path: "expression" },
       { label: "Operators", path: "operator" },
       { label: "MCQs", path: "practiceq" },
+      { label: "C-Programs-Chapter-1", path: "chapter1" },
     ],
   },
   {
@@ -54,6 +54,14 @@ const lessons = [
       { label: "MCQs", path: "arraymcq" },
     ],
   },
+    {
+    group: "String",
+    items: [
+      { label: "String in C", path: "string" },
+      { label: "String manipulation functions", path: "functionstring" },
+      { label: "MCQs", path: "stringmcq" },
+    ],
+  },
 ];
 
 const LearnC = () => {
@@ -65,7 +73,7 @@ const LearnC = () => {
       <div key={section.group}>
         <Typography
           variant="subtitle1"
-          sx={{ mt: 2, mb: 1, fontWeight: "bold", color: "#yellow" }}
+          sx={{ mt: 2, mb: 1, fontWeight: "bold", color: "#ddd" }}
         >
           {section.group}
         </Typography>
@@ -94,9 +102,13 @@ const LearnC = () => {
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                C Programming Topics
-              </Typography>
+              {/* ✅ Fixed color */}
+             <Typography
+  variant="h6"
+  sx={{ flexGrow: 1, color: "white !important" }}
+>
+  C Programming Topics
+</Typography>
               <Button
                 component={Link}
                 to="/"
@@ -114,11 +126,16 @@ const LearnC = () => {
             onClose={() => setDrawerOpen(false)}
           >
             <div className="drawer">
-              <Typography variant="h6" gutterBottom>
+              {/* ✅ Fixed drawer title color */}
+              <Typography
+                variant="h6"
+                gutterBottom
+                sx={{ display: "flex", alignItems: "center", color: "#2e3b55" }}
+              >
                 <MenuBookIcon fontSize="small" sx={{ mr: 1 }} />
                 C Programming
               </Typography>
-              <Divider sx={{ borderColor: "rgba(255,255,255,0.2)", mb: 1 }} />
+              <Divider sx={{ borderColor: "rgba(0,0,0,0.2)", mb: 1 }} />
               <List onClick={() => setDrawerOpen(false)}>
                 {lessons.map((section) => (
                   <React.Fragment key={section.group}>
@@ -126,7 +143,7 @@ const LearnC = () => {
                       <ListItemText
                         primary={section.group}
                         primaryTypographyProps={{
-                          sx: { fontWeight: "bold", color: "yellow" },
+                          sx: { fontWeight: "bold", color: "#2e3b55" },
                         }}
                       />
                     </ListItem>
@@ -137,12 +154,7 @@ const LearnC = () => {
                         component={Link}
                         to={lesson.path}
                       >
-                        <ListItemText
-                          primary={lesson.label}
-                          primaryTypographyProps={{
-                            sx: { color: "#000" }, // 🔧 Text is now black on mobile
-                          }}
-                        />
+                        <ListItemText primary={lesson.label} />
                       </ListItem>
                     ))}
                   </React.Fragment>
@@ -169,4 +181,3 @@ const LearnC = () => {
 };
 
 export default LearnC;
-
