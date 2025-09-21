@@ -44,7 +44,8 @@ import Array from "./pages/about-c/Array";
 import Arraymcq from "./pages/about-c/Arraymcq";
 import Functionarry from "./pages/about-c/Functionarray";
 import Arraytypes from "./pages/about-c/Arraytypes";
-
+import String from "./pages/about-c/String";
+import Chapter1 from "./pages/about-c/Chapter1";
 
 // Games pages
 import Towerofhanoi from "./pages/games/Towerofhanoi";
@@ -96,6 +97,8 @@ function App() {
           <Route path="arraytypes" element={<Arraytypes />} />
           <Route path="functionarray" element={<Functionarry />} />
           <Route path="arraymcq" element={<Arraymcq />} />
+          <Route path="string" element={<String />} />
+          <Route path="chapter1" element={<Chapter1 />} />
 
        
         </Route>
