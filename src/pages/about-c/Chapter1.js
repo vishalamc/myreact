@@ -232,13 +232,12 @@ const PracticePrograms = () => {
                       {showAnswer[key] && (
                         <Box
   sx={{
-    mt: { xs: 1, sm: 2, md: 3 }, // smaller → bigger margins
-    p: { xs: 1, sm: 2, md: 3 },  // padding adjusts per screen size
+    mt: 1,
+    p: { xs: 1, sm: 2 },
     backgroundColor: "#e0e0e0",
     borderRadius: 1,
-    fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" }, // text size responsive
-    width: { xs: "100%", sm: "90%", md: "70%" }, // shrink on larger screens
-    mx: "auto", // centers horizontally
+    overflowX: "auto", // ✅ adds scroll on small screens
+    fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }, // responsive font size
   }}
 >
                           <pre>{prog.answer}</pre>
@@ -257,3 +256,4 @@ const PracticePrograms = () => {
 };
 
 export default PracticePrograms;
+
