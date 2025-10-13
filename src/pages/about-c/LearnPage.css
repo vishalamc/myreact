@@ -40,7 +40,7 @@
 }
 
 .sidebar ul.sub-list li a {
-  color: #90caf9;
+  color: white;
   text-decoration: none;
   padding: 4px 8px;
   display: block;
@@ -104,4 +104,5 @@
     padding: 15px;
   }
 }
+
 
