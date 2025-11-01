@@ -1,5 +1,5 @@
 import React from "react";
-import ReactGA from "react-ga4";
+
 import { BrowserRouter as Router, Navigate, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header"; // Make sure file name matches this import
@@ -8,7 +8,7 @@ import ContactCard from "./pages/ContactCard";
 import AboutPage from "./pages/About-Project";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
-import ImageCard from "./components/ImageCard";
+
 
 import HomePage from "./pages/HomePage";
 import Videolectures from "./pages/Videolectures";
@@ -45,6 +45,7 @@ import Arraymcq from "./pages/about-c/Arraymcq";
 import Functionarry from "./pages/about-c/Functionarray";
 import Arraytypes from "./pages/about-c/Arraytypes";
 import String from "./pages/about-c/String";
+import Stringfunctions from "./pages/about-c/Stringfunctions";
 import Chapter1 from "./pages/about-c/Chapter1";
 
 // Games pages
@@ -64,9 +65,8 @@ function App() {
       <Header />
     <ScrollToTop />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-
-        <Route path="/learnc" element={<LearnC />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/learnc" element={<LearnC />}>
           <Route index element={<Navigate to="introduction" replace />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="variables" element={<Variables />} />
@@ -89,7 +89,7 @@ function App() {
           <Route path="switchcase" element={<Switchcase />} />
           <Route path="loops" element={<Loops />} />
           <Route path="jumpingstatements" element={<Jump />} />
-       <Route path="userdefine" element={<Userdefine />} />
+          <Route path="userdefine" element={<Userdefine />} />
           <Route path="predefine" element={<Predefine />} />
           <Route path="functionmcq" element={<Functionmcq />} />
           <Route path="recursive" element={<Recursive />} />
@@ -98,6 +98,7 @@ function App() {
           <Route path="functionarray" element={<Functionarry />} />
           <Route path="arraymcq" element={<Arraymcq />} />
           <Route path="string" element={<String />} />
+          <Route path="stringfunctions" element={<Stringfunctions />} />
           <Route path="chapter1" element={<Chapter1 />} />
 
        
@@ -119,5 +120,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
