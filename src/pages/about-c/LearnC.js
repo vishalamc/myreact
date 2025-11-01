@@ -58,8 +58,52 @@ const lessons = [
     group: "String",
     items: [
       { label: "String in C", path: "string" },
-      { label: "String manipulation functions", path: "functionstring" },
-      { label: "MCQs", path: "stringmcq" },
+      { label: "String manipulation functions", path: "stringfunctions" },
+      
+    ],
+  },
+  {
+    group: "Structure",
+    items: [
+      { label: "User defined data types in C", path: "structure" },
+      { label: "Passing structures to functions", path: "structurefunctions" },
+      { label: "Self-referential structures", path: "selfreferentialstructure" },
+    ],
+  },
+  {
+    group: "Union",
+    items: [
+      { label: "Unions in C", path: "union" },
+      { label: "Structure vs Union", path: "unionstructure" },
+    ],
+  },
+  {
+    group: "Pointer",
+    items: [
+      { label: "Pointer in C", path: "pointer" },
+      { label: "Passing pointers to Functions ", path: "pointerfunctions" },
+      { label: "Operation on Pointers", path: "pointeroperations" },
+       { label: "Pointer and Arrays", path: "pointerarrays" },
+       { label: "Structures and Pointers", path: "pointerstructure" },
+    ],
+  },
+  {
+    group: "File handling",
+    items: [
+      { label: " File Handling in C", path: "filehandling" },
+      { label: "File Operations", path: "fileoperations" },
+      { label: "Sequential Vs Random Access Files", path: "sequentialrandom" },
+    ],
+  },
+  {
+    group: "Preprocessor",
+    items: [
+      { label: " # define statement", path: "hashdefine" },
+      { label: "Functional Macros", path: "functionalmacros" },
+      { label: "using # include ", path: "hashinclude" },
+    { label: "using #ifdef", path: "hashifdef" },
+        { label: "Other Preprocessor Commands", path: "otherpreprocessor" },
+         { label: "Macros Vs Functions", path: "macrofunction" },
     ],
   },
 ];
