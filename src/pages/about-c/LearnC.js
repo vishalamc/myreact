@@ -32,6 +32,7 @@ const lessons = [
       { label: "Variables", path: "variables" },
       { label: "Expressions and Statements", path: "expression" },
       { label: "Operators", path: "operator" },
+      { label: "Control Structure", path: "controlstructure" },
       { label: "MCQs", path: "practiceq" },
       { label: "C-Programs-Chapter-1", path: "chapter1" },
     ],
