@@ -34,6 +34,7 @@ const lessons = [
       { label: "Operators", path: "operator" },
       { label: "Control Structure", path: "controlstructure" },
       { label: "MCQs", path: "practiceq" },
+      
       { label: "C-Programs-Chapter-1", path: "chapter1" },
     ],
   },
@@ -67,7 +68,7 @@ const lessons = [
     group: "Structure",
     items: [
       { label: "User defined data types in C", path: "structure" },
-      { label: "Passing structures to functions", path: "structurefunctions" },
+      { label: "Passing structures to functions", path: "structurefunction" },
       { label: "Self-referential structures", path: "selfreferentialstructure" },
     ],
   },
