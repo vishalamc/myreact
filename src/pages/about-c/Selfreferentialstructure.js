@@ -39,9 +39,8 @@ const SelfReferentialStructure = () => {
           </Typography>
 
           <Typography sx={{ mb: 2, textAlign: "justify" }}>
-            In other words, one member of the structure refers to another structure variable of the same type — 
-            enabling a **chain of connections**.
-          </Typography>
+            In other words we can say, one member of the structure refers to another structure variable of the same type.
+                    </Typography>
 
           <Typography variant="h6" sx={{ mt: 2, color: "#1976d2" }}>
             🔹 Example:
@@ -81,12 +80,7 @@ int main() {
 }`}
           </Box>
 
-          <Typography variant="subtitle1">
-            <strong>Explanation:</strong><br />
-            • The structure <code>Node</code> has a pointer <code>*next</code> that points to another <code>Node</code>.<br />
-            • This allows linking multiple nodes (records) together dynamically.<br />
-            • Commonly used in data structures like **Linked Lists**, **Stacks**, and **Queues**.
-          </Typography>
+         
         </CardContent>
       </Card>
 
@@ -107,3 +101,4 @@ int main() {
 };
 
 export default SelfReferentialStructure;
+
