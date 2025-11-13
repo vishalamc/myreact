@@ -47,7 +47,9 @@ import Arraytypes from "./pages/about-c/Arraytypes";
 import String from "./pages/about-c/String";
 import Stringfunctions from "./pages/about-c/Stringfunctions";
 import Chapter1 from "./pages/about-c/Chapter1";
-
+import Structure from "./pages/about-c/Structure";
+import Structurefunction from "./pages/about-c/Structurefunction";
+import Selfreferentialstructure from "./pages/about-c/Selfreferentialstructure";
 // Games pages
 import Towerofhanoi from "./pages/games/Towerofhanoi";
 import Computerbuilder from "./pages/games/Computerbuilder";
@@ -100,8 +102,10 @@ function App() {
           <Route path="string" element={<String />} />
           <Route path="stringfunctions" element={<Stringfunctions />} />
           <Route path="chapter1" element={<Chapter1 />} />
-
-       
+          <Route path="structure" element={<Structure />} />
+          <Route path="structurefunction" element={<Structurefunction />} />
+          <Route path="selfreferentialstructure" element={<Selfreferentialstructure />} />
+        
         </Route>
 
         <Route path="/videolectures" element={<Videolectures />} />
