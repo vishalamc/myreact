@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PointerFunction = () => {
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: "900px", mx: "auto" }}>
-      <Typography
+      <Typography gutterBottom color='primary'
         variant="h4"
         sx={{ fontWeight: "bold", textAlign: "center", mb: 3 }}
       >
@@ -30,7 +30,7 @@ const PointerFunction = () => {
       <Box
         sx={{
           ml: 2,
-          background: "#f4f4f4",
+          background: "rgba(29, 77, 7, 0.23)",
           p: 2,
           borderRadius: 2,
           overflowX: "auto",
@@ -51,7 +51,7 @@ const PointerFunction = () => {
       {/* Code Block */}
       <Box
         sx={{
-          background: "#f4f4f4",
+          background: "rgba(29, 77, 7, 0.23)",
           p: 2,
           borderRadius: 2,
           overflowX: "auto",
@@ -91,7 +91,7 @@ int main()
           variant="contained"
           color="primary"
           component={Link}
-          to="/pointer"
+          to="/learnc/pointer"
         >
           ⬅ Back
         </Button>
@@ -99,7 +99,7 @@ int main()
           variant="contained"
           color="secondary"
           component={Link}
-          to="/pointerarithmetic">
+          to="/learnc/pointeroperation">
           Next ➡
         </Button>
       </Box>
