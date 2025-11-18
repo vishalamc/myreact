@@ -83,8 +83,8 @@ const lessons = [
     group: "Pointer",
     items: [
       { label: "Pointer in C", path: "pointer" },
-      { label: "Passing pointers to Functions ", path: "pointerfunctions" },
-      { label: "Operation on Pointers", path: "pointeroperations" },
+      { label: "Passing pointers to Functions ", path: "pointerfunction" },
+      { label: "Operation on Pointers", path: "pointeroperation" },
        { label: "Pointer and Arrays", path: "pointerarrays" },
        { label: "Structures and Pointers", path: "pointerstructure" },
     ],
@@ -227,3 +227,4 @@ const LearnC = () => {
 };
 
 export default LearnC;
+
