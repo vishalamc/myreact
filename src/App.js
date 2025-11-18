@@ -50,6 +50,11 @@ import Chapter1 from "./pages/about-c/Chapter1";
 import Structure from "./pages/about-c/Structure";
 import Structurefunction from "./pages/about-c/Structurefunction";
 import Selfreferentialstructure from "./pages/about-c/Selfreferentialstructure";
+import Union from "./pages/about-c/Union";
+import Unionstructure from "./pages/about-c/Unionstructure";
+import Enum from "./pages/about-c/Enum";
+import Pointer from "./pages/about-c/Pointer";
+
 // Games pages
 import Towerofhanoi from "./pages/games/Towerofhanoi";
 import Computerbuilder from "./pages/games/Computerbuilder";
@@ -105,7 +110,10 @@ function App() {
           <Route path="structure" element={<Structure />} />
           <Route path="structurefunction" element={<Structurefunction />} />
           <Route path="selfreferentialstructure" element={<Selfreferentialstructure />} />
-        
+          <Route path="union" element={<Union />} />
+          <Route path="unionstructure" element={<Unionstructure />} />
+          <Route path="enum" element={<Enum />} />
+           <Route path="pointer" element={<Pointer />} />
         </Route>
 
         <Route path="/videolectures" element={<Videolectures />} />
