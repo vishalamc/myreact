@@ -54,7 +54,10 @@ import Union from "./pages/about-c/Union";
 import Unionstructure from "./pages/about-c/Unionstructure";
 import Enum from "./pages/about-c/Enum";
 import Pointer from "./pages/about-c/Pointer";
-
+import Pointerfunction from "./pages/about-c/Pointerfunction";
+import Pointeroperation from "./pages/about-c/Pointeroperation";
+import Pointerarray from "./pages/about-c/Pointerarray";
+import Pointerstructure from "./pages/about-c/Pointerstructure";
 // Games pages
 import Towerofhanoi from "./pages/games/Towerofhanoi";
 import Computerbuilder from "./pages/games/Computerbuilder";
@@ -113,7 +116,11 @@ function App() {
           <Route path="union" element={<Union />} />
           <Route path="unionstructure" element={<Unionstructure />} />
           <Route path="enum" element={<Enum />} />
-           <Route path="pointer" element={<Pointer />} />
+          <Route path="pointer" element={<Pointer />} />
+          <Route path="pointerfunction" element={<Pointerfunction />} />
+          <Route path="pointeroperation" element={<Pointeroperation />} />
+          <Route path="pointerarray" element={<Pointerarray />} />
+          <Route path="pointerstructure" element={<Pointerstructure />} />
         </Route>
 
         <Route path="/videolectures" element={<Videolectures />} />
