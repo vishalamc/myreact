@@ -6,7 +6,7 @@ const Pointer = () => {
   return (
     <Box sx={{ p: { xs: 2, md: 4 }, maxWidth: "900px", mx: "auto" }}>
       <Typography
-        variant="h4"
+        variant="h4" gutterBottom color='primary'
         sx={{ fontWeight: "bold", textAlign: "center", mb: 3 }}
       >
         Pointers in C
@@ -104,11 +104,11 @@ int main() {
           justifyContent: "space-between",
         }}
       >
-        <Button variant="contained" color="primary" component={Link} to="/unionstructure">
+        <Button variant="contained" color="primary" component={Link} to="/learnc/unionstructure">
           ⬅ Back
         </Button>
 
-        <Button variant="contained" color="secondary" component={Link} to="/pointertypes">
+        <Button variant="contained" color="secondary" component={Link} to="/learnc/pointerfunction">
           Next ➡
         </Button>
       </Box>
