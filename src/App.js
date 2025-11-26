@@ -58,6 +58,9 @@ import Pointerfunction from "./pages/about-c/Pointerfunction";
 import Pointeroperation from "./pages/about-c/Pointeroperation";
 import Pointerarray from "./pages/about-c/Pointerarray";
 import Pointerstructure from "./pages/about-c/Pointerstructure";
+import Filehandling from "./pages/about-c/Filehandling";
+import Fileoperation from "./pages/about-c/Fileoperation";
+import Sequentialrandom from "./pages/about-c/Sequentialrandom";
 // Games pages
 import Towerofhanoi from "./pages/games/Towerofhanoi";
 import Computerbuilder from "./pages/games/Computerbuilder";
@@ -121,6 +124,9 @@ function App() {
           <Route path="pointeroperation" element={<Pointeroperation />} />
           <Route path="pointerarray" element={<Pointerarray />} />
           <Route path="pointerstructure" element={<Pointerstructure />} />
+          <Route path="filehandling" element={<Filehandling />} />
+          <Route path="fileoperations" element={<Fileoperation />} />
+          <Route path="sequentialrandom" element={<Sequentialrandom />} />
         </Route>
 
         <Route path="/videolectures" element={<Videolectures />} />
