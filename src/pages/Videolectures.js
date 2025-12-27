@@ -5,7 +5,7 @@ const recordedLecturesData = {
     color: '#2563eb',
     icon: 'https://img.icons8.com/color/96/000000/c-programming.png',
     videos: [
-      { id: 1, videoUrl: 'https://www.youtube.com/watch?v=f0EWiGaKMKI', title: 'Introduction to Programming Language', duration: '12:34' },
+      { id: 1, videoUrl: 'https://www.youtube.com/embed/f0EWiGaKMKI', title: 'Introduction to Programming Language', duration: '12:34' },
       { id: 2, videoUrl: 'https://www.youtube.com/embed/G2tp0RzWnXc', title: 'Variables and Data Types', duration: '15:20' },
       { id: 3, videoUrl: 'https://www.youtube.com/embed/G2tp0RzWnXc', title: 'Control Flow Statements', duration: '18:45' },
       { id: 4, videoUrl: 'https://www.youtube.com/embed/G2tp0RzWnXc', title: 'Functions in C', duration: '20:15' },
@@ -535,6 +535,7 @@ export default function RecordedLectures() {
     </div>
   );
 }
+
 
 
 
