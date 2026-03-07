@@ -8,11 +8,13 @@ import ContactCard from "./pages/ContactCard";
 import AboutPage from "./pages/About-Project";
 import ScrollToTop from "./components/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
-
-
 import HomePage from "./pages/HomePage";
 import Videolectures from "./pages/Videolectures";
-
+// About VbDot Net pages
+import VbnetMainPage from "./pages/vb-net/VbnetMainPage";
+import VbIntroduction from "./pages/vb-net/VbIntroduction";
+import Vbbasic from "./pages/vb-net/Vbbasic";
+import Vboperators from "./pages/vb-net/Vboperators";
 // About C pages
 import LearnC from "./pages/about-c/LearnC";
 import Introduction from "./pages/about-c/Introduction";
@@ -79,7 +81,15 @@ function App() {
     <ScrollToTop />
       <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/vbnetmainpage" element={<VbnetMainPage />}>
+          <Route index element={<Navigate to="vbintroduction" replace />} />
+          <Route path="vbintroduction" element={<VbIntroduction />} />
+          <Route path="vbbasic" element={<Vbbasic />} />
+          <Route path="vboperators" element={<Vboperators />} />
+          </Route>
+       
           <Route path="/learnc" element={<LearnC />}>
+        
           <Route index element={<Navigate to="introduction" replace />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="variables" element={<Variables />} />
