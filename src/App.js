@@ -16,6 +16,8 @@ import VbIntroduction from "./pages/vb-net/VbIntroduction";
 import Vbbasic from "./pages/vb-net/Vbbasic";
 import Vboperators from "./pages/vb-net/Vboperators";
 import Vbdecision from "./pages/vb-net/Vbdecision";
+import Vbloop from "./pages/vb-net/Vbloop";
+import Vbarray from "./pages/vb-net/Vbarray";
 // About C pages
 import LearnC from "./pages/about-c/LearnC";
 import Introduction from "./pages/about-c/Introduction";
@@ -88,6 +90,8 @@ function App() {
           <Route path="vbbasic" element={<Vbbasic />} />
           <Route path="vboperators" element={<Vboperators />} />
           <Route path="vbdecision" element={<Vbdecision />} />
+          <Route path="vbloop" element={<Vbloop />} />
+          <Route path="vbarray" element={<Vbarray />} />
           </Route>
        
           <Route path="/learnc" element={<LearnC />}>
