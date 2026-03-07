@@ -36,7 +36,7 @@ const lessons = [
     items: [
       { label: "VB.Net Data types", path: "vbbasic" },
       { label: "Operators", path: "vboperators" },
-      { label: "Decision Statements", path: "recursive" },
+      { label: "Decision Statements", path: "vbdecision" },
       { label: "Loop Statements", path: "functionmcq" },
       { label: "Arrays", path: "functionmcq" },
     ],
