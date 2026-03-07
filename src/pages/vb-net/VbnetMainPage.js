@@ -44,13 +44,13 @@ const lessons = [
   {
     group: "OOP using VB.Net",
     items: [
-      { label: "Object  Oriented  features", path: "array" },
-      { label: "Declaring Classes", path: "arraytypes" },
+      { label: "Object  Oriented  features", path: "vboops" },
+      { label: "Declaring Classes", path: "vbclass" },
       { label: "Implementing Typecasting", path: "functionarray" },
       { label: "Optional arguments", path: "arraymcq" },
       { label: " Error handling in  Procedures", path: "arraymcq" },
    { label: "Properties", path: "arraymcq" },
-   { label: "Public  and  Private  variables", path: "arraymcq" },
+   { label: "Public  and  Private  variables", path: "vbclass" },
    { label: "Types  of  Properties", path: "arraymcq" },
    { label: "Polymorphism", path: "arraymcq" },
     { label: "Inheritance", path: "arraymcq" },
