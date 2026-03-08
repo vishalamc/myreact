@@ -20,6 +20,7 @@ import Vbloop from "./pages/vb-net/Vbloop";
 import Vbarray from "./pages/vb-net/Vbarray";
 import Vboops from "./pages/vb-net/Vboops";
 import Vbclass from "./pages/vb-net/Vbclass";
+import Vbtypecasting from "./pages/vb-net/Vbtypecasting";
 // About C pages
 import LearnC from "./pages/about-c/LearnC";
 import Introduction from "./pages/about-c/Introduction";
@@ -96,6 +97,7 @@ function App() {
           <Route path="vbarray" element={<Vbarray />} />
           <Route path="vboops" element={<Vboops />} />
           <Route path="vbclass" element={<Vbclass />} />
+          <Route path="vbtypecasting" element={<Vbtypecasting />} />
           </Route>
        
           <Route path="/learnc" element={<LearnC />}>
