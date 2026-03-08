@@ -46,7 +46,7 @@ const lessons = [
     items: [
       { label: "Object  Oriented  features", path: "vboops" },
       { label: "Declaring Classes", path: "vbclass" },
-      { label: "Implementing Typecasting", path: "functionarray" },
+      { label: "Implementing Typecasting", path: "vbtypecasting" },
       { label: "Optional arguments", path: "arraymcq" },
       { label: " Error handling in  Procedures", path: "arraymcq" },
    { label: "Properties", path: "arraymcq" },
