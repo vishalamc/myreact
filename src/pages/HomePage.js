@@ -5,10 +5,10 @@ import { FaCuttlefish, FaCode, FaJava, FaPython,FaMicrosoft } from "react-icons/
 
 const learnCourses = [
   { icon: <FaCuttlefish className="course-icon" />, title: "C Programming", desc: "Master the foundations of programming in C.", link: "/learnc" },
+   { icon: <FaCode className="course-icon" />, title: "C Programming-Lab", desc: "Transform Ideas into Programs with C Programming.", link: "/clablandingpage" },
   { icon: <FaCode className="course-icon" />, title: "C++ Programming", desc: "Learn object-oriented programming with C++.", link: "/ComingSoon" },
   { icon: <FaJava className="course-icon" />, title: "Java Programming", desc: "Build robust and scalable applications in Java.", link: "/ComingSoon" },
-  { icon: <FaPython className="course-icon" />, title: "Python Programming", desc: "Learn Python for AI, data science, and more.", link: "/ComingSoon" },
-  { icon: <FaMicrosoft className="course-icon" />, title: "Window Programming using VB.Net", desc: "Learn Vb.Net for developing window Applications", link: "/vbnetmainpage" }
+   { icon: <FaMicrosoft className="course-icon" />, title: "Window Programming using VB.Net", desc: "Learn Vb.Net for developing window Applications", link: "/vbnetmainpage" }
 ];
 
 const practiceCourses = [
