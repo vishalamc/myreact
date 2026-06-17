@@ -65,12 +65,12 @@ export default function ClabLandingPage() {
   ];
 
   const latestPrograms = [
-    "Print Hello World",
-    "Largest of Three Numbers",
-    "Prime Number Check",
-    "Fibonacci Series",
-    "Palindrome Number",
-    "Matrix Addition",
+    "Login Name Validation System",
+    "Validate User Password",
+    "Banking Transactions",
+    "Water Tank Monitoring",
+    "Parking Fee Calculator",
+    "Railway Ticket Fare",
   ];
 
   return (
@@ -98,7 +98,7 @@ export default function ClabLandingPage() {
 
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <button
-                onClick={() => navigate("/learnc/introduction")}
+                onClick={() => navigate("/Comingsoon")}
                 className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold hover:bg-yellow-500"
               >
                 Start Practicing
@@ -113,20 +113,7 @@ export default function ClabLandingPage() {
         </div>
       </section>
 
-      {/* SEARCH */}
-      <section className="max-w-6xl mx-auto px-6 -mt-8 relative z-10">
-        <div className="bg-white rounded-2xl shadow-xl p-4 flex items-center">
-          <FaSearch className="text-gray-400 text-xl mr-3" />
-
-          <input
-            type="text"
-            placeholder="Search Programs, Topics..."
-            className="w-full outline-none text-slate-700 text-lg"
-          />
-        </div>
-      </section>
-
-      {/* STATS */}
+           {/* STATS */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-6">
 
@@ -200,11 +187,7 @@ export default function ClabLandingPage() {
                   Daily Coding Challenge
                 </h2>
               </div>
-
-              <p>
-                Write a C Program to find the largest among three numbers.
-              </p>
-            </div>
+                 </div>
 
             <button className="mt-5 md:mt-0 bg-white text-green-600 px-6 py-3 rounded-xl font-bold">
               Solve Now
@@ -242,7 +225,7 @@ export default function ClabLandingPage() {
                   </h3>
 
                   <p className="text-sm text-gray-500">
-                    Beginner Level Program
+                    Medium Level Program
                   </p>
                 </div>
 
