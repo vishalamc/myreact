@@ -21,6 +21,7 @@ import Vbarray from "./pages/vb-net/Vbarray";
 import Vboops from "./pages/vb-net/Vboops";
 import Vbclass from "./pages/vb-net/Vbclass";
 import Vbtypecasting from "./pages/vb-net/Vbtypecasting";
+import Vboptional from "./pages/vb-net/Vboptional";
 // About C pages
 import LearnC from "./pages/about-c/LearnC";
 import Introduction from "./pages/about-c/Introduction";
@@ -73,7 +74,11 @@ import Sequentialrandom from "./pages/about-c/Sequentialrandom";
 import Towerofhanoi from "./pages/games/Towerofhanoi";
 import Computerbuilder from "./pages/games/Computerbuilder";
 import Codejumble from "./pages/games/Codejumble";
-
+// C-Lab Pages
+import ClabLandingPage from "./pages/c-lab/Clablandingpage";
+import CBasicsPage from "./pages/c-lab/CBasicsPage";
+import ProgramDetail from "./pages/c-lab/ProgramDetail";
+import ProblemStatement from "./pages/c-lab/ProblemStatement";
 // Other pages
 import ComingSoon from "./pages/ComingSoon";
 import Gamedashboard from "./pages/Gamedashboard";
@@ -98,10 +103,11 @@ function App() {
           <Route path="vboops" element={<Vboops />} />
           <Route path="vbclass" element={<Vbclass />} />
           <Route path="vbtypecasting" element={<Vbtypecasting />} />
+          <Route path="vboptional" element={<Vboptional />} />
+
           </Route>
        
           <Route path="/learnc" element={<LearnC />}>
-        
           <Route index element={<Navigate to="introduction" replace />} />
           <Route path="introduction" element={<Introduction />} />
           <Route path="variables" element={<Variables />} />
@@ -150,7 +156,16 @@ function App() {
           <Route path="fileoperations" element={<Fileoperation />} />
           <Route path="sequentialrandom" element={<Sequentialrandom />} />
         </Route>
-
+       <Route path="/clablandingpage" element={<ClabLandingPage />} />
+       <Route path="/c-lab/CBasicsPage" element={<CBasicsPage />} />
+       <Route
+  path="/c-program/:id"
+  element={<ProgramDetail />}
+/>
+<Route
+  path="/problem/:id"
+  element={<ProblemStatement />}
+/>
         <Route path="/videolectures" element={<Videolectures />} />
         <Route path="/ComingSoon" element={<ComingSoon />} />
         <Route path="/myportfolio" element={<Myportfolio />} />
