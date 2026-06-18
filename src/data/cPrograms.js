@@ -96,5 +96,76 @@ int main()
 }`,
     input:"Enter Password: Vishal@123",
     output: "Password Accepted."
+  },
+  {
+    id: 3,
+    title: "ATM Withdrawal System",
+    level: "Medium",
+    description: `
+Ravi has a savings account in a bank and frequently uses the ATM to withdraw money.
+
+To ensure that customers always maintain a minimum amount in their account, the bank has introduced the following rules for ATM transactions:
+
+• The withdrawal amount must not exceed the available account balance.
+• A minimum balance of ₹1000 must remain in the account after the withdrawal.
+
+Whenever a customer enters a withdrawal amount, the ATM should verify these conditions before processing the transaction.
+
+If both conditions are satisfied, the withdrawal should be successful and the remaining balance should be displayed. Otherwise, the ATM should reject the transaction and display an appropriate error message.
+
+Write a C program that accepts the choices from the user for banking transactions: check balance, withdrawal amount, deposit amount.
+`,
+    code: `#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    static float balance=1000.0f;
+    float amount;
+    int choice;
+    do{
+        printf("Seelect your choice 1.Check Balance 2.Deposit 3.Withdrawal 4.Exit");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:printf("Your Current balance is:%.2f",balance);
+            break;
+            case 2:printf("Enter Deposit Amount");
+                    scanf("%f",&amount);
+                    if(amount>0)
+                    {
+                        balance=balance+amount;
+                        printf("Your Updated balance is:%.2f",balance);
+                        
+                    }
+                    else
+                    {
+                    printf("Transaction Failed!");
+                    }
+                    break;
+            case 3:printf("Enter Withdrawal Amount");
+                    scanf("%f", &amount);
+                    if(amount <= balance && (balance - amount) >= 1000)
+                    {
+                    printf("Withdrawal Successful.");
+                    balance=balance-amount;
+                    printf("Remaining Balance = %.2f", balance);
+                    }
+                    else
+                    {
+                    printf("Transaction Failed!");
+                    }
+                    break;
+            case 4:exit(0);
+            default:printf("Invalid Choice");
+            
+        }
+    }while(1);
+
+    return 0;
+}`,
+    
+input:'Select Your Choice:1.Check Balance 2.Deposit 3.Withdrawal 4.Exit',
+output: "Your Current balance is:1000.00"
   }
+
 ];
