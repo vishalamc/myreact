@@ -208,27 +208,7 @@ int main()
     printf("\nTrip with Maximum Passengers = Trip %d", tripNo);
 
     return 0;
-}`,
-    
-input:'
-Enter the number of passengers for 10 trips:
-Trip 1: 25
-Trip 2: 30
-Trip 3: 18
-Trip 4: 40
-Trip 5: 35
-Trip 6: 28
-Trip 7: 22
-Trip 8: 45
-Trip 9: 38
-Trip 10: 27
-',
-output: '
-Total Passengers = 308
-Average Passengers per Trip = 30.80
-Maximum Passengers = 45
-Trip with Maximum Passengers = Trip 8
-'
-  }
+}`
+  
 
 ];
