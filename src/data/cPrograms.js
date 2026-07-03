@@ -166,6 +166,69 @@ int main()
     
 input:'Select Your Choice:1.Check Balance 2.Deposit 3.Withdrawal 4.Exit',
 output: "Your Current balance is:1000.00"
+  },
+   {
+    id: 4,
+    title: "Bus Passenger Counting System",
+    level: "Medium",
+    description: `
+A city bus service records the number of passengers travelling in a bus during 10 trips in a day. The transport manager wants to know the total passengers, average passengers per trip, and the trip with the maximum number of passengers. Write a C program using a one-dimensional array.,
+    code: `#include <stdio.h>
+	   #include <stdlib.h>
+int main()
+{
+    int passengers[10];
+    int i, total = 0, max, tripNo;
+
+    printf("Enter the number of passengers for 10 trips:\n");
+    for(i = 0; i < 10; i++)
+    {
+        printf("Trip %d: ", i + 1);
+        scanf("%d", &passengers[i]);
+    }
+
+    max = passengers[0];
+    tripNo = 1;
+
+    // Calculate total and maximum
+    for(i = 0; i < 10; i++)
+    {
+        total = total + passengers[i];
+
+        if(passengers[i] > max)
+        {
+            max = passengers[i];
+            tripNo = i + 1;
+        }
+    }
+
+    printf("\nTotal Passengers = %d", total);
+    printf("\nAverage Passengers per Trip = %.2f", (float)total / 10);
+    printf("\nMaximum Passengers = %d", max);
+    printf("\nTrip with Maximum Passengers = Trip %d", tripNo);
+
+    return 0;
+}`,
+    
+input:'
+Enter the number of passengers for 10 trips:
+Trip 1: 25
+Trip 2: 30
+Trip 3: 18
+Trip 4: 40
+Trip 5: 35
+Trip 6: 28
+Trip 7: 22
+Trip 8: 45
+Trip 9: 38
+Trip 10: 27
+',
+output: '
+Total Passengers = 308
+Average Passengers per Trip = 30.80
+Maximum Passengers = 45
+Trip with Maximum Passengers = Trip 8
+'
   }
 
 ];
